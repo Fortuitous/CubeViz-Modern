@@ -190,7 +190,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       
       // Calculate available space inside the .panel.glass
       const availableWidth = rect.width - 32; // 1rem padding (16px) each side
-      const availableHeight = rect.height - 8; // Reduced vertical padding (4px top + 4px bottom)
+      const availableHeight = rect.height - 140; // Subtract overhead (header + legend + padding)
       const unitSize = Math.min(availableWidth, availableHeight);
 
       // Label Scaling: Reduced size for relocated legend layout
@@ -243,6 +243,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
 
   return (
     <div ref={containerRef} className="panel glass" style={{ 
+      flex: 1,
       width: '100%', 
       margin: '0', 
       overflow: 'hidden', 
