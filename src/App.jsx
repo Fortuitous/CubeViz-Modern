@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import BackgammonBoard from './components/BackgammonBoard'
 import Heatmap from './components/Heatmap'
-import HeatmapLegend from './components/HeatmapLegend'
 import { DECK_SET_ORDER, DECK_ORDER, CC_CARD_ORDER } from './constants/legacyData'
 
 /**
@@ -353,7 +352,6 @@ function App() {
           <div className="right-pane">
             <div className="heatmap-main-area">
               <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true}/>
-              <HeatmapLegend dataType={heatmapDataType} />
             </div>
 
             <div className="heatmap-controls panel">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo, useRef, useLayoutEffect } from 'react';
+import HeatmapLegend from './HeatmapLegend';
 
 // Color swatches from legacy code
 const BlueColorTable = ["#f7fbff", "#e3eef9", "#cfe1f2", "#b5d4e9", "#93c3df", "#6daed5", "#4b97c9", "#2f7ebc", "#1864aa", "#0a4a90", "#08306b"];
@@ -268,11 +269,10 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         width: '100%', 
         display: 'flex', 
         flexDirection: 'column',
-        justifyContent: 'flex-start', 
+        justifyContent: 'center', 
         alignItems: 'center', 
         overflow: 'hidden',
-        gap: '10px',
-        paddingTop: '32px'
+        gap: '2px'
       }}>
         {/* Taker Needs Header */}
         <div style={{ 
@@ -350,6 +350,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
             })}
           </div>
         </div>
+        <HeatmapLegend dataType={dataType} />
       </div>
     </div>
   );
