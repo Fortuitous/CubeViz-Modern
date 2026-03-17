@@ -278,6 +278,15 @@
     margin-top: 4px;
     padding-bottom: 4px;
   }
+  .right-pane {
+    padding-bottom: 4px !important;
+  }
+  .heatmap-main-area {
+    padding-bottom: 0px !important;
+  }
+  .heatmap-controls {
+    padding-bottom: 4px !important;
+  }
   .panel {
     padding: 4px !important;
     margin-bottom: 4px !important;
