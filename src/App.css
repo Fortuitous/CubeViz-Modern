@@ -276,20 +276,25 @@
 @media screen and (max-height: 800px) {
   .left-pane {
     margin-top: 4px;
-    padding-bottom: 4px;
+    margin-bottom: 4px !important; /* Switch to margin for baseline sync */
+    padding-bottom: 0px !important;
   }
   .right-pane {
-    padding-bottom: 4px !important;
+    margin-bottom: 4px !important; /* Switch to margin for baseline sync */
+    padding-bottom: 0px !important;
   }
   .heatmap-main-area {
     padding-bottom: 0px !important;
   }
   .heatmap-controls {
-    padding-bottom: 4px !important;
+    /* Padding/margin already handled by .right-pane parent */
   }
   .panel {
     padding: 4px !important;
     margin-bottom: 4px !important;
+  }
+  .left-pane .panel:last-child {
+    margin-bottom: 0 !important;
   }
   .board-container {
     margin-bottom: 4px !important;
