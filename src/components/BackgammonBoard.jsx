@@ -74,6 +74,13 @@ const BackgammonBoard = ({
           
           // makeBoard should only be called once to create the SVG elements
           window.bglog.makeBoard();
+          
+          // Crop trays from the SVG viewBox (Original: 0 0 1028 724)
+          const svg = container.find('svg');
+          if (svg.length > 0) {
+            svg[0].setAttribute('viewBox', '60 0 908 724');
+          }
+          
           if (window.theme1) window.bglog.loadTheme(window.theme1);
           setInitialized(true);
           console.log("Board container initialized once");
@@ -216,7 +223,7 @@ const BackgammonBoard = ({
         style={{ 
           width: '100%', 
           position: 'relative',
-          paddingBottom: '59%', // Thoroughly tightened aspect ratio
+          paddingBottom: '79.7%', // Updated for 908x724 aspect ratio (Tray-Crop)
           backgroundColor: 'transparent', 
           overflow: 'hidden'
         }}
