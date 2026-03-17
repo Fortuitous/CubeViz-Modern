@@ -108,7 +108,7 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
   };
 
   return (
-    <div className="position-details panel" style={{ marginTop: '0', marginBottom: '8px', padding: '10px' }}>
+    <div className="position-details panel">
       <table className="data-table">
         <tbody>
           <tr>
@@ -327,7 +327,10 @@ function App() {
 
             <div className="board-container">
               <BackgammonBoard xgid={currentXgid} perspective={perspective} appTheme={theme} />
-              <div className="board-controls" style={{ marginTop: '10px' }}>
+            </div>
+
+            <div className="panel board-controls-panel">
+              <div className="board-controls">
                 <button className="panel-button" onClick={() => setPerspective(prev => prev === 'doubler' ? 'taker' : 'doubler')}>
                   {perspective === 'doubler' ? "Doubler's Perspective" : "Taker's Perspective"}
                 </button>
@@ -339,7 +342,7 @@ function App() {
 
             <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={decks.find(d => d.DeckID === parseInt(selectedDeckId, 10))?.DeckName || ''} />
 
-            <div className="panel nav-panel" style={{ marginTop: 'auto', padding: '10px' }}>
+            <div className="panel nav-panel" style={{ marginTop: 'auto' }}>
               <div className="position-nav-buttons">
                 <button className="panel-button" onClick={handlePrevPosition} disabled={currentCardIndex === 0}>Prev</button>
                 <div className="pos-indicator" style={{ display: 'flex', alignItems: 'center', fontWeight: 'bold' }}>{currentCardIndex + 1} / {cardsInDeck.length}</div>
