@@ -30,7 +30,7 @@
   gap: 1rem;
   padding: 10px 1rem 0.5rem 1rem;
   background-color: var(--bg-primary);
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .heatmap-main-area {
