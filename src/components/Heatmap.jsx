@@ -250,7 +250,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       flexDirection: 'column', 
       minWidth: 0, 
       minHeight: 0,
-      padding: '4px 16px',
+      padding: '8px 16px',
       position: 'relative'
     }}>
       <div style={{
@@ -269,10 +269,11 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         width: '100%', 
         display: 'flex', 
         flexDirection: 'column',
-        justifyContent: 'center', 
+        justifyContent: 'flex-start', 
         alignItems: 'center', 
         overflow: 'hidden',
-        gap: '2px'
+        gap: '10px',
+        paddingTop: '32px'
       }}>
         {/* Taker Needs Header */}
         <div style={{ 
