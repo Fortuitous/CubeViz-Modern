@@ -326,7 +326,14 @@ function App() {
           <div className="left-pane">
 
             <div className="board-container">
-              <BackgammonBoard xgid={currentXgid} perspective={perspective} appTheme={theme} />
+              <BackgammonBoard 
+                xgid={currentXgid} 
+                perspective={perspective} 
+                cubeLevel={cubeLevelMap[cubeTo]}
+                boardTheme={boardTheme}
+                boardDirection={boardDirection}
+                appTheme={theme} 
+              />
             </div>
 
             <div className="panel board-controls-panel">
