@@ -48,6 +48,8 @@
   gap: 1rem;
   overflow-y: auto;
   color: var(--text-primary);
+  height: fit-content;
+  margin: auto 0;
 }
 
 /* Panel & Component Styling */
@@ -126,9 +128,6 @@
 }
 
 .board-container {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
   margin-bottom: 12px;
   display: flex;
   flex-direction: column;

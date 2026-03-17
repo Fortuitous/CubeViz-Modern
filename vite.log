@@ -1,0 +1,1185 @@
+nohup: ignoring input
+
+> cubeviz-modern@0.0.0 dev
+> vite
+
+
+  VITE v7.3.1  ready in 1871 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+12:59:31 PM [vite] (client) hmr update /src/components/BackgammonBoard.jsx
+1:07:45 PM [vite] (client) hmr update /src/App.jsx
+1:07:46 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Unexpected token (345:21)
+
+  343 |                 className="panel-button" 
+  344 |                 style={{ flex: 1, fontSize: '0.8rem' }}
+> 345 |                   if (currentXgid) {
+      |                      ^
+  346 |                     const fullXgid = currentXgid.startsWith('XGID=') ? currentXgid : "XGID=" + currentXgid;
+  347 |                     navigator.clipboard.writeText(fullXgid);
+  348 |                     setCopiedXgid(true);
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:345:21
+  343 |                  className="panel-button" 
+  344 |                  style={{ flex: 1, fontSize: '0.8rem' }}
+  345 |                    if (currentXgid) {
+      |                       ^
+  346 |                      const fullXgid = currentXgid.startsWith('XGID=') ? currentXgid : "XGID=" + currentXgid;
+  347 |                      navigator.clipboard.writeText(fullXgid);
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.jsxParseIdentifier (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4569:12)
+      at JSXParserMixin.jsxParseNamespacedName (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4576:23)
+      at JSXParserMixin.jsxParseAttribute (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4652:22)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4667:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4662:17)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4686:33)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+1:07:47 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Unexpected token (345:21)
+
+  343 |                 className="panel-button" 
+  344 |                 style={{ flex: 1, fontSize: '0.8rem' }}
+> 345 |                   if (currentXgid) {
+      |                      ^
+  346 |                     const fullXgid = currentXgid.startsWith('XGID=') ? currentXgid : "XGID=" + currentXgid;
+  347 |                     navigator.clipboard.writeText(fullXgid);
+  348 |                     setCopiedXgid(true);
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:345:21
+  343 |                  className="panel-button" 
+  344 |                  style={{ flex: 1, fontSize: '0.8rem' }}
+  345 |                    if (currentXgid) {
+      |                       ^
+  346 |                      const fullXgid = currentXgid.startsWith('XGID=') ? currentXgid : "XGID=" + currentXgid;
+  347 |                      navigator.clipboard.writeText(fullXgid);
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.jsxParseIdentifier (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4569:12)
+      at JSXParserMixin.jsxParseNamespacedName (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4576:23)
+      at JSXParserMixin.jsxParseAttribute (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4652:22)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4667:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4662:17)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4686:33)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+1:07:55 PM [vite] (client) hmr update /src/App.jsx
+1:25:53 PM [vite] (client) hmr update /src/App.jsx
+1:25:55 PM [vite] (client) hmr update /src/App.css
+1:30:14 PM [vite] (client) hmr update /src/App.jsx
+1:34:47 PM [vite] (client) hmr update /src/App.jsx
+1:35:36 PM [vite] (client) hmr update /src/App.jsx
+1:53:52 PM [vite] (client) hmr update /src/App.css
+1:53:54 PM [vite] (client) hmr update /src/App.jsx
+1:54:49 PM [vite] (client) hmr update /src/App.jsx
+1:57:47 PM [vite] (client) hmr update /src/index.css
+1:57:49 PM [vite] (client) hmr update /src/components/BackgammonBoard.jsx
+2:00:09 PM [vite] (client) hmr update /src/index.css
+2:00:26 PM [vite] (client) hmr update /src/App.jsx
+2:01:42 PM [vite] (client) hmr update /src/App.jsx
+2:11:56 PM [vite] (client) hmr update /src/App.jsx
+2:26:29 PM [vite] (client) hmr update /src/App.jsx
+2:41:40 PM [vite] (client) hmr update /src/App.css
+2:42:01 PM [vite] (client) hmr update /src/App.jsx
+2:49:58 PM [vite] (client) hmr update /src/App.css
+2:50:00 PM [vite] (client) hmr update /src/components/Heatmap.jsx
+2:50:06 PM [vite] (client) hmr update /src/components/HeatmapLegend.jsx
+2:50:08 PM [vite] (client) hmr update /src/App.jsx
+2:51:30 PM [vite] (client) hmr update /src/App.css
+3:02:55 PM [vite] (client) hmr update /src/components/HeatmapLegend.jsx
+3:02:57 PM [vite] (client) hmr update /src/components/Heatmap.jsx
+3:02:59 PM [vite] (client) hmr update /src/App.css
+3:22:47 PM [vite] (client) hmr update /src/components/HeatmapLegend.jsx
+3:35:42 PM [vite] (client) hmr update /src/index.css
+3:35:45 PM [vite] (client) hmr update /src/index.css
+3:35:47 PM [vite] (client) hmr update /src/App.jsx
+3:35:48 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:48 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:49 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:50 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:50 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:51 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:55 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:56 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:57 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:58 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:35:58 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Expected corresponding JSX closing tag for <div>. (566:10)
+
+  564 |               </div>
+  565 |             </div>
+> 566 |           </>
+      |           ^
+  567 |         )}
+  568 |       </div>
+  569 |     </div>
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:566:10
+  564 |                </div>
+  565 |              </div>
+  566 |            </>
+      |            ^
+  567 |          )}
+  568 |        </div>
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4722:14)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11675:28)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11331:23)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10893:29)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10885:17)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseExpression (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4632:31)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4711:36)
+      at JSXParserMixin.jsxParseElementAt (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4698:32)
+      at JSXParserMixin.jsxParseElement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4749:17)
+      at JSXParserMixin.parseExprAtom (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:4759:19)
+      at JSXParserMixin.parseExprSubscripts (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10831:21)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:39
+      at JSXParserMixin.allowInAnd (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12426:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:10800:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12493:17)
+3:36:38 PM [vite] (client) hmr update /src/App.jsx
+3:36:39 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:39 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:40 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:41 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:42 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:42 PM [vite] (client) hmr update /src/App.jsx
+3:36:42 PM [vite] Internal server error: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx: Missing semicolon. (582:2)
+
+  580 |
+  581 | export default App
+> 582 | lt App
+      |   ^
+  583 |
+  Plugin: vite:react-babel
+  File: /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/src/App.jsx:582:2
+  580 |  
+  581 |  export default App
+  582 |  lt App
+      |    ^
+  583 |  
+      at constructor (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.semicolon (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:6895:10)
+      at JSXParserMixin.parseExpressionStatement (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13285:10)
+      at JSXParserMixin.parseStatementContent (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12899:19)
+      at JSXParserMixin.parseStatementLike (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:261:32)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:189:28
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:113:33
+      at step (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:287:14)
+      at /mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/mnt/c/users/jerem/Documents/Code/AntiG/CubeViz/CubeViz-Modern/node_modules/@babel/core/node_modules/gensync/index.js:223:11)
+3:36:45 PM [vite] (client) hmr update /src/App.css
+3:37:10 PM [vite] (client) hmr update /src/components/Heatmap.jsx
+3:37:17 PM [vite] (client) hmr update /src/components/HeatmapLegend.jsx
+3:42:08 PM [vite] (client) hmr update /src/index.css
+3:42:10 PM [vite] (client) hmr update /src/App.css
+3:44:41 PM [vite] (client) hmr update /src/components/Heatmap.jsx

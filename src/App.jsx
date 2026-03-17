@@ -325,13 +325,8 @@ function App() {
       ) : (
         <>
           <div className="left-pane">
-            <div className="panel" style={{ flex: 0, marginBottom: '0', padding: '10px' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Board Position</div>
-              </div>
-            </div>
 
-            <div className="board-container" style={{ padding: '10px' }}>
+            <div className="board-container">
               <BackgammonBoard xgid={currentXgid} perspective={perspective} appTheme={theme} />
               <div className="board-controls" style={{ marginTop: '10px' }}>
                 <button className="panel-button" onClick={() => setPerspective(prev => prev === 'doubler' ? 'taker' : 'doubler')}>
