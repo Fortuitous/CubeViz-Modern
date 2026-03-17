@@ -43,14 +43,16 @@ const HeatmapLegend = ({ dataType }) => {
     alignItems: 'center',
     justifyContent: 'center',
     gap: '12px',
-    width: '100%'
+    width: '100%',
+    flexWrap: 'wrap'
   };
 
   const titleStyle = {
     fontSize: '1.1rem',
     fontWeight: 'bold',
     textAlign: 'right',
-    minWidth: '150px',
+    minWidth: '100px',
+    flex: '0 1 auto',
     lineHeight: '1.1'
   };
 
