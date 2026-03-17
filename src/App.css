@@ -339,4 +339,17 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+  /* Right Panel Compaction & Scrollbar Control */
+  .heatmap-controls {
+    overflow-y: auto !important; /* Allow scroll if compaction isn't enough */
+    gap: 0.25rem !important; /* Reduce gap within controls */
+  }
+  .heatmap-controls > div {
+    gap: 0.25rem !important; /* Override inline 0.625rem gap in parent or children */
+  }
+  .heatmap-controls .section-title {
+    padding-top: 4px !important; /* Reduce space above title */
+    margin-bottom: 2px !important; /* Reduce space below title */
+    font-size: 0.75rem !important; /* Even denser titles */
+  }
 }
