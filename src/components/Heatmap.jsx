@@ -190,7 +190,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       
       // Calculate available space inside the .panel.glass
       const availableWidth = rect.width - 32; // 1rem padding (16px) each side
-      const availableHeight = rect.height - 165; // Subtract overhead (Score Data + Spacer + Legend + Paddings)
+      const availableHeight = rect.height - 110; // Optimized overhead to fill vertical void
       const unitSize = Math.min(availableWidth, availableHeight);
 
       // Label Scaling: Reduced size for relocated legend layout
@@ -357,7 +357,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       <div style={{ 
         width: '100%', 
         borderTop: '1px solid var(--border-color)', 
-        margin: '4px 0 8px 0',
+        margin: '12px 0',
         opacity: 0.6
       }} />
 
@@ -366,7 +366,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         width: '100%', 
         display: 'flex', 
         justifyContent: 'center', 
-        paddingBottom: '4px' 
+        paddingBottom: '8px' 
       }}>
         <HeatmapLegend dataType={dataType} />
       </div>
