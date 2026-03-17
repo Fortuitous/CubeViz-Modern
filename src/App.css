@@ -11,12 +11,12 @@
 }
 
 .left-pane {
-  flex: 0 0 430px;
+  flex: 0 0 442px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   border-right: 1px solid var(--border-color);
-  padding: 0 10px 5px 10px;
+  padding: 0 1rem 5px 1rem;
   margin-top: 10px;
   background-color: var(--bg-primary);
 }
