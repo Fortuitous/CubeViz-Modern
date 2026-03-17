@@ -242,7 +242,6 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
 
   return (
     <div ref={containerRef} className="panel glass" style={{ 
-      flex: 1, 
       width: '100%', 
       margin: '0', 
       overflow: 'hidden', 

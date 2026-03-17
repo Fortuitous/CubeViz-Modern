@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 0;
+  gap: 10px;
   overflow: hidden;
   min-width: 0;
 }
