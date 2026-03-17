@@ -275,46 +275,53 @@
 /* Phase 1: Micro-shaves (height < 800px) */
 @media screen and (max-height: 800px) {
   .left-pane {
-    margin-top: 6px;
-    padding-bottom: 6px;
+    margin-top: 4px;
+    padding-bottom: 4px;
   }
   .panel {
-    padding: 6px !important;
-    margin-bottom: 6px !important;
+    padding: 4px !important;
+    margin-bottom: 4px !important;
   }
   .board-container {
-    margin-bottom: 6px !important;
+    margin-bottom: 4px !important;
   }
   .position-details {
-    margin-bottom: 6px !important;
+    margin-bottom: 4px !important;
   }
 }
 
-/* Phase 2: Button & Text density (height < 720px) */
+/* Phase 2: Button & Text density + Early Board Scaling (height < 720px) */
 @media screen and (max-height: 720px) {
   .panel-button {
-    padding: 6px !important;
-    font-size: 0.85rem !important;
+    padding: 4px 10px !important;
+    font-size: 0.8rem !important;
   }
   .section-title {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.15rem !important;
   }
   .data-table td {
-    padding: 1px 4px !important;
+    padding: 0px 4px !important;
   }
   .board-controls {
-    gap: 6px !important;
+    gap: 4px !important;
   }
-}
-
-/* Phase 3: Board Scaling (height < 650px) */
-@media screen and (max-height: 650px) {
+  .position-nav-buttons {
+    gap: 4px !important;
+  }
   .board-container {
-    max-width: 350px; /* Force board to shrink from 412px */
+    max-width: 320px !important; /* Start shrinking board earlier to clear scrollbar */
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Phase 3: Ultra-Compact Scaling (height < 650px) */
+@media screen and (max-height: 650px) {
+  .board-container {
+    max-width: 270px !important; /* Force smaller board for tiny viewports */
+  }
   .left-pane {
+    /* Keep width stable to prevent data layout breakage */
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
