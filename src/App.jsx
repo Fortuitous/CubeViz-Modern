@@ -326,8 +326,7 @@ function App() {
         <>
           <div className="left-pane">
             <div className="panel" style={{ flex: 0, marginBottom: '0', padding: '10px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <button onClick={handleBackToSelection} className="panel-button" style={{ padding: '4px 8px', fontSize: '0.8rem' }}>← New Deck</button>
+              <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Board Position</div>
               </div>
             </div>
@@ -352,14 +351,12 @@ function App() {
                 <div className="pos-indicator" style={{ display: 'flex', alignItems: 'center', fontWeight: 'bold' }}>{currentCardIndex + 1} / {cardsInDeck.length}</div>
                 <button className="panel-button" onClick={handleNextPosition} disabled={currentCardIndex === cardsInDeck.length - 1 || cardsInDeck.length === 0}>Next</button>
               </div>
+              <button onClick={handleBackToSelection} className="panel-button" style={{ width: '100%', marginTop: '10px' }}>← New Deck</button>
             </div>
           </div>
 
           <div className="right-pane">
             <div className="heatmap-main-area">
-              <div className="panel" style={{ width: '100%', display: 'flex', justifyContent: 'center', padding: '10px', backgroundColor: 'var(--accent-blue)', color: 'white', borderRadius: '4px 4px 0 0', marginBottom: '0' }}>
-                <b style={{ textTransform: 'uppercase', letterSpacing: '1px' }}>Score Data</b>
-              </div>
               <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true}/>
               <HeatmapLegend dataType={heatmapDataType} />
             </div>
