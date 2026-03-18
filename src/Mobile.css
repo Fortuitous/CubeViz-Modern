@@ -79,8 +79,9 @@ html, body, #root, .app-container {
 .mobile-app-level {
   display: flex !important;
   flex-direction: column !important;
-  height: 100% !important; /* Use 100% for maximum stability */
-  padding-bottom: env(safe-area-inset-bottom) !important; /* Lifts content above OS nav bars */
+  height: 100% !important;
+  height: calc(var(--vh, 1vh) * 100) !important;
+  padding-bottom: env(safe-area-inset-bottom) !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
   margin: 0 !important;

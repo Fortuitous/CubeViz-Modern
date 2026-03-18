@@ -67,6 +67,21 @@ const MobileView = ({
     return () => document.removeEventListener('fullscreenchange', handleFsChange);
   }, []);
 
+  // Viewport height fix for mobile browsers (accounts for OS bars and browser chrome)
+  React.useEffect(() => {
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
+    return () => {
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
+    };
+  }, []);
+
   // Theme is applied via className on the root div (theme-${theme}) — no body mutation needed.
 
   const currentDeckName = decks.find(d => d.DeckID === parseInt(selectedDeckId, 10))?.DeckName || 'Select Deck';
