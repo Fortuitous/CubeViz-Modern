@@ -227,9 +227,9 @@ function App() {
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
   // Layout routing: switch to mobile view when viewport is narrow
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
+  const [useMobileLayout, setUseMobileLayout] = useState(() => window.innerWidth < 1024);
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setUseMobileLayout(window.innerWidth < 1024);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -309,7 +309,7 @@ function App() {
   const cubeLevelMap = { 2: 0, 4: 1, 8: 2, 16: 3, 32: 4 };
 
   // Route to mobile layout when viewport is narrow
-  if (isMobile) {
+  if (useMobileLayout) {
     return (
       <MobileView
         hasStarted={hasStarted}
