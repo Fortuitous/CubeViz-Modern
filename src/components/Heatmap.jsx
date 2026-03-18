@@ -189,8 +189,8 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       const rect = el.getBoundingClientRect();
       
       // Calculate available space inside the .panel.glass
-      const availableWidth = rect.width - 32; // 1rem padding (16px) each side
-      const availableHeight = rect.height - 110; // Optimized overhead to fill vertical void
+      const availableWidth = isMobile ? rect.width : rect.width - 32; 
+      const availableHeight = isMobile ? window.innerHeight : rect.height - 110; 
       const unitSize = Math.min(availableWidth, availableHeight);
 
       // Label Scaling: Reduced size for relocated legend layout
@@ -201,7 +201,8 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       
       // total units = actualLength + 1 (for headers) + padding space
       const totalUnits = actualLength + 1; 
-      const cellPx = Math.floor((unitSize - gaps - 40) / totalUnits);
+      const overhead = isMobile ? 25 : 40; // Less overhead for row headers on mobile
+      const cellPx = Math.floor((unitSize - gaps - overhead) / totalUnits);
       
       if (cellPx > 2) {
         setCellSize(cellPx);
@@ -355,24 +356,24 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
             })}
           </div>
         </div>
-        
-        {/* Doubler Needs Label (Mobile Only, Left Justified) */}
-        {isMobile && (
-          <div style={{
-            width: '100%',
-            textAlign: 'left',
-            paddingLeft: '10px',
-            marginTop: '8px',
-            fontWeight: 'bold',
-            fontSize: '12px',
-            color: 'var(--text-primary)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em'
-          }}>
-            Doubler Needs
-          </div>
-        )}
       </div>
+
+      {/* Doubler Needs Label (Mobile Only, Left Justified) */}
+      {isMobile && (
+        <div style={{
+          width: '100%',
+          textAlign: 'left',
+          paddingLeft: '10px',
+          marginTop: '12px',
+          fontWeight: 'bold',
+          fontSize: '14px',
+          color: 'var(--text-primary)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}>
+          Doubler Needs
+        </div>
+      )}
 
       {/* Legend & Spacer (Desktop Only) */}
       {!isMobile && (
