@@ -18,10 +18,9 @@
 .app-container.mobile-layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;    /* fallback for older browsers */
-  height: 100dvh;   /* dynamic: tracks real visible area as browser chrome slides */
+  min-height: 100vh;    /* fallback */
+  min-height: 100dvh;   /* dynamic */
   width: 100vw;
-  overflow: hidden;
   padding: 0;
   gap: 0;
   background-color: var(--bg-primary);
