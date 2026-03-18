@@ -43,6 +43,29 @@ const MobileView = ({
   cubeLevelMap
 }) => {
   const [activeTab, setActiveTab] = useState('board'); // 'board' | 'heatmap' | 'settings'
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen()
+        .then(() => setIsFullscreen(true))
+        .catch(err => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    }
+  };
+
+  // Sync state if user exits via browser gesture
+  React.useEffect(() => {
+    const handleFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', handleFsChange);
+    return () => document.removeEventListener('fullscreenchange', handleFsChange);
+  }, []);
 
   // Theme is applied via className on the root div (theme-${theme}) — no body mutation needed.
 
@@ -74,6 +97,9 @@ const MobileView = ({
               </select>
             </div>
             <button onClick={handleStartDataView} className="mobile-primary-button">Start Session</button>
+            <button onClick={toggleFullScreen} className="mobile-secondary-button">
+              {isFullscreen ? 'Exit Fullscreen' : 'Go Fullscreen'}
+            </button>
           </div>
         </div>
       </div>
