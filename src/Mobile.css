@@ -1,5 +1,13 @@
 /* Mobile-specific styles for CubeViz Modern */
 
+/* Lock the body when mobile layout is active */
+body:has(.mobile-layout) {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
 :root {
   --mobile-header-height: 50px;
   --mobile-nav-height: 65px;
@@ -14,7 +22,8 @@
 .app-container.mobile-layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh;    /* fallback for older browsers */
+  height: 100dvh;   /* dynamic: tracks real visible area as browser chrome slides */
   width: 100vw;
   overflow: hidden;
   padding: 0;
@@ -66,7 +75,6 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   padding: 10px;
-  padding-bottom: 40px; /* More space for bottom nav */
 }
 
 .mobile-page {
@@ -74,6 +82,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  /* Ensure content clears the fixed bottom nav — significantly increased to handle Galaxy S21 buttons */
+  padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom) + 100px);
 }
 
 @keyframes fadeIn {
@@ -240,16 +250,20 @@
   border-color: var(--accent-blue);
 }
 
-/* Bottom Navigation */
+/* Bottom Navigation — fixed to viewport so it's immune to scroll quirks */
 .mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: var(--mobile-nav-height);
   min-height: var(--mobile-nav-height);
-  background: var(--bg-panel);
+  background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: env(safe-area-inset-bottom);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-item {

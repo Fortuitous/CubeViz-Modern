@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import DesktopView from './components/DesktopView'
+import './Mobile.css'
 import MobileView from './components/MobileView'
+import DesktopView from './components/DesktopView'
 import { DECK_SET_ORDER, DECK_ORDER, CC_CARD_ORDER } from './constants/legacyData'
 
 const themeData = {
@@ -40,10 +41,10 @@ function App() {
   const [cubeTo, setCubeTo] = useState(() => parseInt(localStorage.getItem('cubeTo'), 10) || 2);
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
-  const [isPortrait, setIsPortrait] = useState(window.innerHeight > window.innerWidth);
-
+  // Layout routing: switch to mobile view when viewport is narrow
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
   useEffect(() => {
-    const handleResize = () => setIsPortrait(window.innerHeight > window.innerWidth);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -123,7 +124,8 @@ function App() {
   const cubeLevelMap = { 2: 0, 4: 1, 8: 2, 16: 3, 32: 4 };
 
   const viewProps = {
-    hasStarted, theme, setTheme,
+    hasStarted,
+    theme, setTheme,
     selectedDeckId, setSelectedDeckId,
     deckSets, decks,
     handleStartDataView,
@@ -143,7 +145,7 @@ function App() {
     themeData, cubeLevelMap
   };
 
-  return isPortrait ? <MobileView {...viewProps} /> : <DesktopView {...viewProps} />;
+  return isMobile ? <MobileView {...viewProps} /> : <DesktopView {...viewProps} />;
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BackgammonBoard from './BackgammonBoard';
 import Heatmap from './Heatmap';
 import PositionDetails from './PositionDetails';
@@ -40,6 +40,7 @@ const DesktopView = ({
   themeData,
   cubeLevelMap
 }) => {
+
   return (
     <div className={`app-container theme-${theme} desktop-layout`}>
       {!hasStarted ? (

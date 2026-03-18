@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import BackgammonBoard from './BackgammonBoard';
 import Heatmap from './Heatmap';
 import PositionDetails from './PositionDetails';
@@ -44,14 +44,7 @@ const MobileView = ({
 }) => {
   const [activeTab, setActiveTab] = useState('board'); // 'board' | 'heatmap' | 'settings'
 
-  // Apply theme class to body — mobile-only side effect, kept here out of App.jsx
-  useEffect(() => {
-    document.body.classList.remove('theme-day', 'theme-night');
-    document.body.classList.add(`theme-${theme}`);
-    return () => {
-      document.body.classList.remove('theme-day', 'theme-night');
-    };
-  }, [theme]);
+  // Theme is applied via className on the root div (theme-${theme}) — no body mutation needed.
 
   const currentDeckName = decks.find(d => d.DeckID === parseInt(selectedDeckId, 10))?.DeckName || 'Select Deck';
 
