@@ -69,19 +69,21 @@ body:has(.mobile-layout) {
 }
 
 /* Main Content Area */
-html, body {
-  height: 100%;
-  overflow: hidden;
+html, body, #root, .app-container {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
 .mobile-app-level {
   display: flex !important;
   flex-direction: column !important;
-  height: 100vh !important;
-  height: 100dvh !important;
+  height: 100% !important; /* Use 100% for maximum stability */
+  padding-bottom: env(safe-area-inset-bottom) !important; /* Lifts content above OS nav bars */
+  box-sizing: border-box !important;
   overflow: hidden !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
 .mobile-main-content {
