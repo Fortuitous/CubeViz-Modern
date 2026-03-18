@@ -91,6 +91,16 @@ body:has(.mobile-layout) {
   margin: 0 !important;
 }
 
+.mobile-heatmap-controls {
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid var(--border-color);
+  margin-top: 8px;
+}
+
 .mobile-page {
   animation: fadeIn 0.2s ease-out;
   display: flex;

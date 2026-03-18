@@ -153,13 +153,9 @@ const MobileView = ({
             <div className="heatmap-section">
               <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true} isMobile={true}/>
             </div>
-          </div>
-        )}
-
-        {activeTab === 'settings' && (
-          <div className="mobile-page settings-page">
-            <div className="settings-section">
-              <h3>Heatmap Controls</h3>
+            
+            {/* Relocated Heatmap Controls */}
+            <div className="mobile-heatmap-controls">
               <div className="control-group">
                 <label>Data Type:</label>
                 <select value={heatmapDataType} onChange={e => setHeatmapDataType(e.target.value)} className="mobile-select">
@@ -175,19 +171,17 @@ const MobileView = ({
                 </select>
               </div>
               <div className="control-group">
-                <label>Duplicate To:</label>
+                <label>Double To:</label>
                 <select value={cubeTo} onChange={e => setCubeTo(parseInt(e.target.value, 10))} className="mobile-select">
                   {[2, 4, 8, 16, 32].map(v => <option key={v} value={v}>{v}</option>)}
                 </select>
               </div>
-              <div className="control-group">
-                <label>Visibility:</label>
-                <select value={heatmapDataVisibility} onChange={e => setHeatmapDataVisibility(e.target.value)} className="mobile-select">
-                  <option value="Show">Show</option>
-                  <option value="Hide">Hide</option>
-                </select>
-              </div>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'settings' && (
+          <div className="mobile-page settings-page">
 
             <div className="settings-section">
               <h3>Visual Settings</h3>

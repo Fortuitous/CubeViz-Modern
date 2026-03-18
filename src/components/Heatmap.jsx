@@ -284,7 +284,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           width: '100%', 
           textAlign: 'center', 
           fontWeight: 'bold', 
-          fontSize: isMobile ? '1.1rem' : `${labelFontSize}px`,
+          fontSize: isMobile ? '0.85rem' : `${labelFontSize}px`,
           // Offset for vertical label + row headers
           paddingLeft: isMobile ? `${100 / actualLength}%` : `${labelFontSize * 2}px`, 
           color: 'var(--text-primary)',
@@ -372,7 +372,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           paddingLeft: '4px',
           marginTop: '12px',
           fontWeight: 'bold',
-          fontSize: '1.1rem',
+          fontSize: '0.85rem',
           color: 'var(--text-primary)',
           textTransform: 'uppercase',
           letterSpacing: '0.05em'
