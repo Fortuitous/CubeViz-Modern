@@ -78,7 +78,13 @@ body:has(.mobile-layout) {
 }
 
 .heatmap-page {
-  padding: 10px 0 !important; /* Full width for heatmap */
+  padding: 10px 0 !important; /* Full volume width */
+}
+
+.heatmap-section {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .mobile-page {

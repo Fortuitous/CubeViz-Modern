@@ -232,13 +232,14 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
   const trackSize = `${cellSize}px`;
 
   const itemStyle = {
-    width: trackSize,
-    height: trackSize,
+    width: isMobile ? '100.2%' : trackSize, // Tiny overlap to ensure no 1px gaps between rows
+    height: isMobile ? 'auto' : trackSize,
+    aspectRatio: isMobile ? '1 / 1' : 'auto',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    fontSize: `${Math.max(6, Math.floor(cellSize * 0.3))}px`,
+    fontSize: `${Math.max(6, Math.floor(cellSize * 0.35))}px`,
     lineHeight: 1
   };
 
@@ -283,10 +284,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           width: '100%', 
           textAlign: 'center', 
           fontWeight: 'bold', 
-          fontSize: `${labelFontSize}px`,
+          fontSize: isMobile ? '14px' : `${labelFontSize}px`,
           // Offset for vertical label + row headers
-          // We use a fixed percentage or base it on something stable
-          paddingLeft: `${labelFontSize * 2}px`, 
+          paddingLeft: isMobile ? `${100 / actualLength}%` : `${labelFontSize * 2}px`, 
           color: 'var(--text-primary)',
           textTransform: 'uppercase',
           letterSpacing: '0.05em'
@@ -317,14 +317,14 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           {/* Corrected Grid with explicit tracks */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: `repeat(${actualLength}, ${trackSize})`,
-            gridTemplateRows: `repeat(${actualLength}, ${trackSize})`,
-            gap: '1px',
+            gridTemplateColumns: isMobile ? `repeat(${actualLength}, 1fr)` : `repeat(${actualLength}, ${trackSize})`,
+            gridTemplateRows: isMobile ? 'auto' : `repeat(${actualLength}, ${trackSize})`,
+            gap: isMobile ? '0' : '1px', // 0 gap on mobile for maximum volume
             backgroundColor: 'var(--border-color)',
-            border: '1px solid var(--border-color)',
-            borderRadius: '4px',
+            border: 'none',
+            borderRadius: isMobile ? '0' : '4px',
             overflow: 'hidden',
-            width: 'max-content',
+            width: isMobile ? '100%' : 'max-content',
             height: 'max-content',
             boxSizing: 'border-box'
           }}>
