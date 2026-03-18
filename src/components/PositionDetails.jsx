@@ -114,7 +114,7 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
                   <b className="text-bold">Deck:</b> <span style={{ marginLeft: '8px' }}>{deckName}</span>
                 </div>
                 <div style={{ fontWeight: 'bold' }}>
-                  <span style={{ color: 'var(--accent-red)', marginRight: '8px' }}>TEST</span> Money Data
+                  Money Data
                 </div>
               </div>
             </td>
