@@ -251,9 +251,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       overflow: 'hidden', 
       display: 'flex', 
       flexDirection: 'column', 
-      minWidth: 0, 
+      minWidth: isMobile ? '100%' : 0, 
       minHeight: 0,
-      padding: isMobile ? '8px 0' : '8px 16px',
+      padding: isMobile ? '8px 1px' : '8px 16px',
       position: 'relative'
     }}>
       {!isMobile && (
@@ -275,7 +275,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         display: 'flex', 
         flexDirection: 'column',
         justifyContent: 'center', 
-        alignItems: isMobile ? 'flex-start' : 'center', // Don't center on mobile, let it fill width
+        alignItems: isMobile ? 'stretch' : 'center', // Stretch to fill width on mobile
         overflow: 'hidden',
         gap: '2px'
       }}>
@@ -284,7 +284,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           width: '100%', 
           textAlign: 'center', 
           fontWeight: 'bold', 
-          fontSize: isMobile ? '14px' : `${labelFontSize}px`,
+          fontSize: isMobile ? '1.1rem' : `${labelFontSize}px`,
           // Offset for vertical label + row headers
           paddingLeft: isMobile ? `${100 / actualLength}%` : `${labelFontSize * 2}px`, 
           color: 'var(--text-primary)',
@@ -294,7 +294,12 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           Taker Needs
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: isMobile ? '0' : '8px',
+          width: isMobile ? '100%' : 'auto'
+        }}>
           {/* Doubler Needs Vertical Label (Desktop Only) */}
           {!isMobile && (
             <div style={{ 
@@ -364,10 +369,10 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         <div style={{
           width: '100%',
           textAlign: 'left',
-          paddingLeft: '10px',
+          paddingLeft: '4px',
           marginTop: '12px',
           fontWeight: 'bold',
-          fontSize: '14px',
+          fontSize: '1.1rem',
           color: 'var(--text-primary)',
           textTransform: 'uppercase',
           letterSpacing: '0.05em'
