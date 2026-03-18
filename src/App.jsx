@@ -227,9 +227,9 @@ function App() {
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
   // Layout routing: switch to mobile view when viewport is narrow
-  const [useMobileLayout, setUseMobileLayout] = useState(() => window.innerWidth < 1024);
+  const [useMobileLayout, setUseMobileLayout] = useState(() => window.innerWidth < 768);
   useEffect(() => {
-    const handleResize = () => setUseMobileLayout(window.innerWidth < 1024);
+    const handleResize = () => setUseMobileLayout(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
