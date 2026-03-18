@@ -77,6 +77,10 @@ body:has(.mobile-layout) {
   padding: 10px;
 }
 
+.heatmap-page {
+  padding: 10px 0 !important; /* Full width for heatmap */
+}
+
 .mobile-page {
   animation: fadeIn 0.2s ease-out;
   display: flex;

@@ -99,7 +99,7 @@ const getContrastColor = (color) => {
   return 'black';
 };
 
-const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Action', globalVisibility = 'Show', showData = true }) => {
+const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Action', globalVisibility = 'Show', showData = true, isMobile = false }) => {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [cellSize, setCellSize] = useState(25);
   const [labelFontSize, setLabelFontSize] = useState(14);
@@ -251,20 +251,22 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       flexDirection: 'column', 
       minWidth: 0, 
       minHeight: 0,
-      padding: '8px 16px',
+      padding: isMobile ? '8px 0' : '8px 16px',
       position: 'relative'
     }}>
-      <div style={{
-        position: 'absolute',
-        top: '10px',
-        left: '16px',
-        fontWeight: 'bold',
-        fontSize: '13.6px',
-        color: 'var(--text-primary)',
-        zIndex: 10
-      }}>
-        Score Data
-      </div>
+      {!isMobile && (
+        <div style={{
+          position: 'absolute',
+          top: '10px',
+          left: '16px',
+          fontWeight: 'bold',
+          fontSize: '13.6px',
+          color: 'var(--text-primary)',
+          zIndex: 10
+        }}>
+          Score Data
+        </div>
+      )}
       <div style={{ 
         flex: 1, 
         width: '100%', 
@@ -292,22 +294,24 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          {/* Doubler Needs Vertical Label */}
-          <div style={{ 
-            writingMode: 'vertical-rl', 
-            textOrientation: 'upright',
-            fontWeight: 'bold',
-            fontSize: `${labelFontSize}px`,
-            color: 'var(--text-primary)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.02em',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minWidth: `${labelFontSize}px`
-          }}>
-            Doubler Needs
-          </div>
+          {/* Doubler Needs Vertical Label (Desktop Only) */}
+          {!isMobile && (
+            <div style={{ 
+              writingMode: 'vertical-rl', 
+              textOrientation: 'upright',
+              fontWeight: 'bold',
+              fontSize: `${labelFontSize}px`,
+              color: 'var(--text-primary)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.02em',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: `${labelFontSize}px`
+            }}>
+              Doubler Needs
+            </div>
+          )}
 
           {/* Corrected Grid with explicit tracks */}
           <div style={{
@@ -351,25 +355,44 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
             })}
           </div>
         </div>
+        
+        {/* Doubler Needs Label (Mobile Only, Left Justified) */}
+        {isMobile && (
+          <div style={{
+            width: '100%',
+            textAlign: 'left',
+            paddingLeft: '10px',
+            marginTop: '8px',
+            fontWeight: 'bold',
+            fontSize: '12px',
+            color: 'var(--text-primary)',
+            textTransform: 'uppercase',
+            letterSpacing: '0.05em'
+          }}>
+            Doubler Needs
+          </div>
+        )}
       </div>
 
-      {/* Horizontal Spacer Line */}
-      <div style={{ 
-        width: '100%', 
-        borderTop: '1px solid var(--border-color)', 
-        margin: '12px 0',
-        opacity: 0.6
-      }} />
-
-      {/* Bottom Legend Area */}
-      <div style={{ 
-        width: '100%', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        paddingBottom: '8px' 
-      }}>
-        <HeatmapLegend dataType={dataType} />
-      </div>
+      {/* Legend & Spacer (Desktop Only) */}
+      {!isMobile && (
+        <>
+          <div style={{ 
+            width: '100%', 
+            borderTop: '1px solid var(--border-color)', 
+            margin: '12px 0',
+            opacity: 0.6
+          }} />
+          <div style={{ 
+            width: '100%', 
+            display: 'flex', 
+            justifyContent: 'center', 
+            paddingBottom: '8px' 
+          }}>
+            <HeatmapLegend dataType={dataType} />
+          </div>
+        </>
+      )}
     </div>
   );
 };
