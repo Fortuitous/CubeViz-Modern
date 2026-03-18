@@ -9,8 +9,8 @@ body:has(.mobile-layout) {
 }
 
 :root {
-  --mobile-header-height: 50px;
-  --mobile-nav-height: 65px;
+  --mobile-header-height: 40px;
+  --mobile-nav-height: 55px;
   --mobile-accent: #4a90e2;
   --mobile-bg-light: #f5f7fa;
   --mobile-bg-dark: #1a1c23;
@@ -99,7 +99,7 @@ body:has(.mobile-layout) {
 
 .mobile-select {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background: var(--bg-control);
@@ -110,20 +110,20 @@ body:has(.mobile-layout) {
 
 .mobile-primary-button {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   background: var(--accent-blue);
   color: white;
   border: none;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.1rem;
-  margin-top: 20px;
+  margin-top: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .mobile-secondary-button {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   background: transparent;
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
@@ -168,7 +168,7 @@ body:has(.mobile-layout) {
 }
 
 .nav-btn {
-  padding: 10px 25px;
+  padding: 8px 20px;
   background: var(--accent-blue);
   color: white;
   border: none;
@@ -200,7 +200,7 @@ body:has(.mobile-layout) {
 }
 
 .action-btn {
-  padding: 12px;
+  padding: 8px;
   background: var(--bg-panel);
   border: 1px solid var(--border-color);
   border-radius: 10px;
