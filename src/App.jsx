@@ -57,11 +57,6 @@ function App() {
   useEffect(() => { localStorage.setItem('heatmapMatchLength', heatmapMatchLength); }, [heatmapMatchLength]);
   useEffect(() => { localStorage.setItem('cubeTo', cubeTo); }, [cubeTo]);
   useEffect(() => { localStorage.setItem('heatmapDataVisibility', heatmapDataVisibility); }, [heatmapDataVisibility]);
-  
-  useEffect(() => {
-    document.body.classList.remove('theme-day', 'theme-night');
-    document.body.classList.add(`theme-${theme}`);
-  }, [theme]);
 
   useEffect(() => {
     const loadData = () => {
