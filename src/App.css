@@ -286,7 +286,9 @@
   .heatmap-main-area {
     padding-bottom: 0px !important;
   }
-  /* .heatmap-controls padding/margin handled by .right-pane parent */
+  .heatmap-controls {
+    /* Padding/margin already handled by .right-pane parent */
+  }
   .panel {
     padding: 4px !important;
     margin-bottom: 4px !important;
