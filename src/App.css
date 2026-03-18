@@ -232,17 +232,17 @@
 
 .theme-picker-list {
   position: absolute;
-  bottom: 100%;
+  top: 100%;
   left: 0;
   width: 100%;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 100;
   max-height: 200px;
   overflow-y: auto;
-  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .theme-picker-option {
@@ -286,9 +286,7 @@
   .heatmap-main-area {
     padding-bottom: 0px !important;
   }
-  .heatmap-controls {
-    /* Padding/margin already handled by .right-pane parent */
-  }
+  /* .heatmap-controls padding/margin handled by .right-pane parent */
   .panel {
     padding: 4px !important;
     margin-bottom: 4px !important;
