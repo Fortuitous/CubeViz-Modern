@@ -69,6 +69,11 @@ body:has(.mobile-layout) {
 }
 
 /* Main Content Area */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .mobile-app-level {
   display: flex !important;
   flex-direction: column !important;
