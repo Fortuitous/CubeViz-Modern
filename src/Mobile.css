@@ -1,0 +1,44 @@
+/* Mobile-specific styles for CubeViz Modern */
+
+.app-container.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 10px;
+  gap: 15px;
+}
+
+.mobile-layout .panel {
+  width: 100% !important;
+  max-width: none !important;
+  margin-bottom: 0 !important;
+}
+
+.mobile-layout .board-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-layout .heatmap-main-area {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mobile-layout .nav-panel {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.mobile-layout .control-select {
+  width: 100%;
+  height: 40px; /* Larger touch target */
+}
+
+/* Ensure the board doesn't overflow */
+.mobile-layout .board-container svg {
+  max-width: 100%;
+  height: auto;
+}
