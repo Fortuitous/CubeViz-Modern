@@ -73,8 +73,10 @@ body:has(.mobile-layout) {
   display: flex !important;
   flex-direction: column !important;
   height: 100vh !important;
-  height: 100dvh !important; /* Dynamic viewport height for mobile browsers */
+  height: 100dvh !important;
   overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .mobile-main-content {
@@ -140,8 +142,7 @@ body:has(.mobile-layout) {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  /* Ensure content clears the fixed bottom nav — significantly increased to handle Galaxy S21 buttons */
-  padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom) + 100px);
+  padding-bottom: 20px;
 }
 
 @keyframes fadeIn {
@@ -326,14 +327,12 @@ body:has(.mobile-layout) {
   border-color: var(--accent-blue);
 }
 
-/* Bottom Navigation — fixed to viewport so it's immune to scroll quirks */
+/* Bottom Navigation — no longer fixed, part of the app flex column */
 .mobile-bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   height: var(--mobile-nav-height);
   min-height: var(--mobile-nav-height);
+  flex-shrink: 0; /* Important: prevents navigation from disappearing */
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   display: grid;
