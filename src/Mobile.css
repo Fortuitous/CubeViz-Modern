@@ -69,8 +69,17 @@ body:has(.mobile-layout) {
 }
 
 /* Main Content Area */
+.mobile-app-level {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100vh !important;
+  height: 100dvh !important; /* Dynamic viewport height for mobile browsers */
+  overflow: hidden !important;
+}
+
 .mobile-main-content {
   flex: 1;
+  min-height: 0; /* Critical for flex overflow */
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -79,6 +88,11 @@ body:has(.mobile-layout) {
 
 .mobile-main-content.heatmap-active {
   padding: 0 !important;
+}
+
+.mobile-main-content.board-active {
+  padding: 0 !important;
+  overflow: hidden !important; /* Page handles own scrolling */
 }
 
 .board-page {
