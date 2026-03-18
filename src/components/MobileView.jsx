@@ -116,7 +116,7 @@ const MobileView = ({
       </div>
 
       {/* Main Content Area */}
-      <div className="mobile-main-content">
+      <main className={`mobile-main-content ${activeTab}-active`}>
         {activeTab === 'board' && (
           <div className="mobile-page board-page">
             <div className="board-section" id="board-container">
@@ -216,7 +216,7 @@ const MobileView = ({
             </div>
           </div>
         )}
-      </div>
+      </main>
 
       {/* Bottom Nav Bar */}
       <div className="mobile-bottom-nav">

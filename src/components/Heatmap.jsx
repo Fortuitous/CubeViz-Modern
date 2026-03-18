@@ -275,7 +275,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         display: 'flex', 
         flexDirection: 'column',
         justifyContent: 'center', 
-        alignItems: 'center', 
+        alignItems: isMobile ? 'flex-start' : 'center', // Don't center on mobile, let it fill width
         overflow: 'hidden',
         gap: '2px'
       }}>
@@ -326,7 +326,8 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
             overflow: 'hidden',
             width: isMobile ? '100%' : 'max-content',
             height: 'max-content',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            margin: isMobile ? '0' : '0 auto' // Ensure no side margins on mobile
           }}>
             {/* Top Left Empty Corner */}
             <div style={{ ...itemStyle, background: 'var(--bg-primary)' }}></div>
