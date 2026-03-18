@@ -81,6 +81,26 @@ body:has(.mobile-layout) {
   padding: 0 !important;
 }
 
+.board-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.board-section, .navigation-strip {
+  flex-shrink: 0;
+}
+
+.mobile-board-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
 .heatmap-page {
   padding: 10px 0 !important; /* Full volume width */
 }

@@ -134,16 +134,18 @@ const MobileView = ({
               <div className="nav-indicator">{currentCardIndex + 1} / {cardsInDeck.length}</div>
               <button className="nav-btn" onClick={handleNextPosition} disabled={currentCardIndex === cardsInDeck.length - 1 || cardsInDeck.length === 0}>Next</button>
             </div>
-            <div className="details-section">
-              <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={currentDeckName} />
-            </div>
-            <div className="quick-actions">
-              <button className="action-btn" onClick={() => setPerspective(prev => prev === 'doubler' ? 'taker' : 'doubler')}>
-                {perspective === 'doubler' ? "Doubler's Perspective" : "Taker's Perspective"}
-              </button>
-              <button className="action-btn" onClick={() => { navigator.clipboard.writeText(`XGID=${currentXgid}`); setCopiedXgid(true); }}>
-                {copiedXgid ? "Copied!" : "Copy XGID"}
-              </button>
+            <div className="mobile-board-scroll-area">
+              <div className="details-section">
+                <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={currentDeckName} />
+              </div>
+              <div className="quick-actions">
+                <button className="action-btn" onClick={() => setPerspective(prev => prev === 'doubler' ? 'taker' : 'doubler')}>
+                  {perspective === 'doubler' ? "Doubler's Perspective" : "Taker's Perspective"}
+                </button>
+                <button className="action-btn" onClick={() => { navigator.clipboard.writeText(`XGID=${currentXgid}`); setCopiedXgid(true); }}>
+                  {copiedXgid ? "Copied!" : "Copy XGID"}
+                </button>
+              </div>
             </div>
           </div>
         )}
