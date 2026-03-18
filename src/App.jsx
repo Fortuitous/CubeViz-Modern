@@ -384,7 +384,7 @@ function App() {
                 <div>
                   <label>Match Length:</label>
                   <select value={heatmapMatchLength} onChange={e => setHeatmapMatchLength(parseInt(e.target.value, 10))} className="control-select">
-                    {[...Array(24)].map((_, i) => <option key={i+2} value={i+2}>{i+2}</option>)}
+                    {[...Array(21)].map((_, i) => <option key={i+5} value={i+5}>{i+5}</option>)}
                   </select>
                 </div>
                 <div>
