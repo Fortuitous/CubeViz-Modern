@@ -182,13 +182,18 @@ const MobileView = ({
               <div className="details-section">
                 <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={currentDeckName} />
               </div>
-              <div className="quick-actions">
-                <button className="action-btn" onClick={() => setPerspective(prev => prev === 'doubler' ? 'taker' : 'doubler')}>
-                  {perspective === 'doubler' ? "Doubler's Perspective" : "Taker's Perspective"}
-                </button>
-                <button className="action-btn" onClick={() => { navigator.clipboard.writeText(`XGID=${currentXgid}`); setCopiedXgid(true); }}>
-                  {copiedXgid ? "Copied!" : "Copy XGID"}
-                </button>
+              <div className="mobile-board-controls">
+                <div className="control-group">
+                  <label>Perspective:</label>
+                  <select 
+                    value={perspective} 
+                    onChange={(e) => setPerspective(e.target.value)}
+                    className="mobile-select"
+                  >
+                    <option value="doubler">Doubler's</option>
+                    <option value="taker">Taker's</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>

@@ -348,10 +348,14 @@ html, body {
   font-size: 1.1rem;
 }
 
-.quick-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.mobile-board-controls {
+  padding: 20px 10px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+}
+
+.mobile-board-controls .control-group {
+  margin-bottom: 0 !important;
 }
 
 .action-btn {
