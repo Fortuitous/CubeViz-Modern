@@ -454,8 +454,11 @@ html, body {
 }
 
 .nav-item.active {
-  color: var(--accent-blue) !important;
   opacity: 1;
+}
+
+.nav-item.active .nav-label {
+  color: var(--accent-blue) !important;
 }
 
 .nav-icon-container {
