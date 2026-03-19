@@ -45,6 +45,8 @@ const MobileView = ({
   const [activeTab, setActiveTab] = useState('board'); // 'board' | 'heatmap' | 'settings'
   const [isFullscreen, setIsFullscreen] = useState(false);
 
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen()
@@ -112,9 +114,11 @@ const MobileView = ({
               </select>
             </div>
             <button onClick={handleStartDataView} className="mobile-primary-button">Start Session</button>
-            <button onClick={toggleFullScreen} className="mobile-secondary-button">
-              {isFullscreen ? 'Exit Fullscreen' : 'Go Fullscreen'}
-            </button>
+            {isAndroid && (
+              <button onClick={toggleFullScreen} className="mobile-secondary-button">
+                {isFullscreen ? 'Exit Fullscreen' : 'Go Fullscreen'}
+              </button>
+            )}
           </div>
         </div>
       </div>
