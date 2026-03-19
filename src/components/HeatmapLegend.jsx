@@ -62,7 +62,7 @@ const HeatmapLegend = ({ dataType, isMobile }) => {
     return (
       <div style={containerStyle}>
         <div style={titleStyle}>Cube Actions:</div>
-        <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', gap: '3px', width: '100%' }}>
+        <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', gap: '3px', width: isMobile ? '100%' : 'auto' }}>
           <LegendCell color="#979797" text="ND-T" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
           <LegendCell color="#6daed5" text="D-T" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
           <LegendCell color="#d92723" text="D-P" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
@@ -85,9 +85,9 @@ const HeatmapLegend = ({ dataType, isMobile }) => {
         {isTake ? 'Take / Pass by up to:' : 'Double / No-Double / Too Good by up to:'}
       </div>
       
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', width: '100%' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: isMobile ? 'stretch' : 'flex-start', width: isMobile ? '100%' : 'auto' }}>
         {/* Row 1 */}
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: isMobile ? '100%' : 'auto' }}>
           <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>{label1}</div>
           {colors1.map((color, i) => (
             <LegendCell key={i} color={color} text={takeErrPos[i]} width={33} height={27} fontSize={isMobile ? 10 : 12} isMobile={isMobile} />
@@ -95,7 +95,7 @@ const HeatmapLegend = ({ dataType, isMobile }) => {
         </div>
         
         {/* Row 2 */}
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: isMobile ? '100%' : 'auto' }}>
           <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>{label2}</div>
           {colors2.map((color, i) => (
             <LegendCell key={i} color={color} text="" width={33} height={27} isMobile={isMobile} />
@@ -104,7 +104,7 @@ const HeatmapLegend = ({ dataType, isMobile }) => {
 
         {/* Row 3 (Only for Double) */}
         {!isTake && (
-          <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', width: isMobile ? '100%' : 'auto' }}>
             <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>T</div>
             {OrangeColorTable.map((color, i) => (
               <LegendCell key={i} color={color} text="" width={33} height={27} isMobile={isMobile} />
