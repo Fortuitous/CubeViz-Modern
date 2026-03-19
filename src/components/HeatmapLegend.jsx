@@ -7,7 +7,7 @@ const OrangeColorTable = ["#fff5eb", "#fee8d3", "#fdd8b3", "#fdc28c", "#fda762",
 
 const takeErrPos = [".005", ".01", ".02", ".04", ".08", ".16", ".32", ".64", "1.3", "2.6", "5.1"];
 
-const LegendCell = ({ color, text, width = 23, height = 23, fontSize = 9 }) => {
+const LegendCell = ({ color, text, width = 23, height = 23, fontSize = 9, isMobile }) => {
   // Simple light/dark check for text contrast
   const isLight = (hex) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -20,14 +20,15 @@ const LegendCell = ({ color, text, width = 23, height = 23, fontSize = 9 }) => {
   return (
     <div style={{
       backgroundColor: color,
-      width: `${width}px`,
+      width: isMobile ? 'auto' : `${width}px`,
+      flex: isMobile ? 1 : 'none',
       height: `${height}px`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       fontSize: `${fontSize}px`,
       color: isLight(color) ? '#333' : '#eee',
-      border: '1px solid var(--border-color)',
+      border: '1px solid var(--border-color, #444)',
       margin: '1px'
     }}>
       {text}
@@ -35,37 +36,38 @@ const LegendCell = ({ color, text, width = 23, height = 23, fontSize = 9 }) => {
   );
 };
 
-const HeatmapLegend = ({ dataType }) => {
+const HeatmapLegend = ({ dataType, isMobile }) => {
   const containerStyle = {
-    padding: '12px 10px',
+    padding: isMobile ? '16px 5px' : '12px 10px',
     display: 'flex',
-    flexDirection: 'row', // Side-by-side
-    alignItems: 'center',
+    flexDirection: isMobile ? 'column' : 'row',
+    alignItems: isMobile ? 'stretch' : 'center',
     justifyContent: 'center',
-    gap: '12px',
+    gap: isMobile ? '8px' : '12px',
     width: '100%',
     flexWrap: 'wrap'
   };
 
   const titleStyle = {
-    fontSize: '1.1rem',
+    fontSize: isMobile ? '0.95rem' : '1.1rem',
     fontWeight: 'bold',
-    textAlign: 'right',
-    minWidth: '100px',
-    flex: '0 1 auto',
-    lineHeight: '1.1'
+    textAlign: isMobile ? 'left' : 'right',
+    minWidth: isMobile ? 'auto' : '100px',
+    flex: isMobile ? '1 1 auto' : '0 1 auto',
+    lineHeight: '1.2',
+    marginBottom: isMobile ? '4px' : '0'
   };
 
   if (dataType === 'Action') {
     return (
       <div style={containerStyle}>
         <div style={titleStyle}>Cube Actions:</div>
-        <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', gap: '3px' }}>
-          <LegendCell color="#979797" text="ND-T" width={60} height={45} fontSize={15} />
-          <LegendCell color="#6daed5" text="D-T" width={60} height={45} fontSize={15} />
-          <LegendCell color="#d92723" text="D-P" width={60} height={45} fontSize={15} />
-          <LegendCell color="#fb8d3d" text="TG-P" width={60} height={45} fontSize={15} />
-          <LegendCell color="#ffff00" text="TG-T" width={60} height={45} fontSize={15} />
+        <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', gap: '3px', width: '100%' }}>
+          <LegendCell color="#979797" text="ND-T" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
+          <LegendCell color="#6daed5" text="D-T" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
+          <LegendCell color="#d92723" text="D-P" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
+          <LegendCell color="#fb8d3d" text="TG-P" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
+          <LegendCell color="#ffff00" text="TG-T" width={60} height={45} fontSize={isMobile ? 13 : 15} isMobile={isMobile} />
         </div>
       </div>
     );
@@ -83,29 +85,29 @@ const HeatmapLegend = ({ dataType }) => {
         {isTake ? 'Take / Pass by up to:' : 'Double / No-Double / Too Good by up to:'}
       </div>
       
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', width: '100%' }}>
         {/* Row 1 */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold' }}>{label1}</div>
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+          <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>{label1}</div>
           {colors1.map((color, i) => (
-            <LegendCell key={i} color={color} text={takeErrPos[i]} width={33} height={27} fontSize={12} />
+            <LegendCell key={i} color={color} text={takeErrPos[i]} width={33} height={27} fontSize={isMobile ? 10 : 12} isMobile={isMobile} />
           ))}
         </div>
         
         {/* Row 2 */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold' }}>{label2}</div>
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+          <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>{label2}</div>
           {colors2.map((color, i) => (
-            <LegendCell key={i} color={color} text="" width={33} height={27} />
+            <LegendCell key={i} color={color} text="" width={33} height={27} isMobile={isMobile} />
           ))}
         </div>
 
         {/* Row 3 (Only for Double) */}
         {!isTake && (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold' }}>T</div>
+          <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+            <div style={{ width: '20px', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>T</div>
             {OrangeColorTable.map((color, i) => (
-              <LegendCell key={i} color={color} text="" width={33} height={27} />
+              <LegendCell key={i} color={color} text="" width={33} height={27} isMobile={isMobile} />
             ))}
           </div>
         )}

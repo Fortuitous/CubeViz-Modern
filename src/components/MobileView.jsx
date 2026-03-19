@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BackgammonBoard from './BackgammonBoard';
 import Heatmap from './Heatmap';
 import PositionDetails from './PositionDetails';
+import HeatmapLegend from './HeatmapLegend';
 import '../Mobile.css';
 
 // Custom Domain Icons for Mobile Navbar
@@ -226,6 +227,11 @@ const MobileView = ({
                 <select value={cubeTo} onChange={e => setCubeTo(parseInt(e.target.value, 10))} className="mobile-select">
                   {[2, 4, 8, 16, 32].map(v => <option key={v} value={v}>{v}</option>)}
                 </select>
+              </div>
+
+              {/* Heatmap Legend */}
+              <div className="mobile-legend-container">
+                <HeatmapLegend dataType={heatmapDataType} isMobile={true} />
               </div>
             </div>
           </div>
