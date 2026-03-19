@@ -357,24 +357,38 @@ function App() {
   return (
     <div className={`app-container theme-${theme}`}>
       {!hasStarted ? (
-        <div className="left-pane" style={{ width: '100%', maxWidth: '350px' }}>
-          <div className="panel" style={{ flex: 0 }}>
-            <h3>Deck Selection</h3>
-            <p className="text-muted" style={{ fontSize: '0.8rem', marginBottom: '10px' }}>Select filters and click Start.</p>
-            <div style={{ marginBottom: '15px' }}>
-              <label style={{ display: 'block', marginBottom: '5px', fontSize: '0.9rem', fontWeight: 'bold' }}>Select Deck:</label>
-              <select value={selectedDeckId} onChange={(e) => setSelectedDeckId(e.target.value)} className="control-select">
-                <option value="" disabled>-- Choose a Deck --</option>
-                {deckSets.map(ds => (
-                  <optgroup key={ds.DeckSetID} label={ds.DeckSetName}>
-                    {decks.filter(d => d.DeckSetID === ds.DeckSetID).map(deck => (
-                      <option key={deck.DeckID} value={deck.DeckID}>{deck.DeckName}</option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
+        <div style={{ display: 'flex', width: '100%', height: '100%' }}>
+          <div className="left-pane" style={{ width: '100%', maxWidth: '350px', paddingTop: '40px' }}>
+            <div className="panel" style={{ flex: 0 }}>
+              <h3>Deck Selection</h3>
+              <p className="text-muted" style={{ fontSize: '0.8rem', marginBottom: '10px' }}>Select filters and click Start.</p>
+              <div style={{ marginBottom: '15px' }}>
+                <label style={{ display: 'block', marginBottom: '5px', fontSize: '0.9rem', fontWeight: 'bold' }}>Select Deck:</label>
+                <select value={selectedDeckId} onChange={(e) => setSelectedDeckId(e.target.value)} className="control-select">
+                  <option value="" disabled>-- Choose a Deck --</option>
+                  {deckSets.map(ds => (
+                    <optgroup key={ds.DeckSetID} label={ds.DeckSetName}>
+                      {decks.filter(d => d.DeckSetID === ds.DeckSetID).map(deck => (
+                        <option key={deck.DeckID} value={deck.DeckID}>{deck.DeckName}</option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+              </div>
+              <button onClick={handleStartDataView} className="panel-button" style={{ width: '100%', background: 'var(--accent-blue)', color: 'white' }}>Start</button>
             </div>
-            <button onClick={handleStartDataView} className="panel-button" style={{ width: '100%', background: 'var(--accent-blue)', color: 'white' }}>Start</button>
+          </div>
+          <div className="welcome-container">
+            <div className="welcome-content">
+              <h2>Welcome to CubeViz</h2>
+              <p>Backgammon match data, aggregated and visualized.</p>
+              <p>
+                This app explores the effect of match-score on cube decisions by presenting cube-action data for all scores up to a 25-point match, all at once. Instead of peeking at a data point here and there (Hey XG, what about this score? What about that score?), see the pattern as a whole. Insights abound.
+              </p>
+              <p>
+                Select a deck of positions in the left panel, and click <strong>Start</strong>.
+              </p>
+            </div>
           </div>
         </div>
       ) : (
