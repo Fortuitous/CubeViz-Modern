@@ -4,6 +4,31 @@ import Heatmap from './Heatmap';
 import PositionDetails from './PositionDetails';
 import '../Mobile.css';
 
+// Custom Domain Icons for Mobile Navbar
+const PositionIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 20L7 4L11 20H3Z" fill="currentColor" fillOpacity="0.2" />
+    <path d="M13 20L17 4L21 20H13Z" fill="currentColor" fillOpacity="0.2" />
+  </svg>
+);
+
+const ScoresIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    {/* Colored cells representing heatmap segments */}
+    <rect x="3" y="3" width="6" height="6" fill="#ef4444" stroke="none" fillOpacity="0.8" />
+    <rect x="9" y="3" width="6" height="6" fill="#f59e0b" stroke="none" fillOpacity="0.8" />
+    <rect x="15" y="3" width="6" height="6" fill="#10b981" stroke="none" fillOpacity="0.8" />
+    <rect x="3" y="9" width="6" height="6" fill="#f59e0b" stroke="none" fillOpacity="0.8" />
+    <rect x="9" y="9" width="6" height="6" fill="#10b981" stroke="none" fillOpacity="0.8" />
+    <rect x="15" y="9" width="6" height="6" fill="#3b82f6" stroke="none" fillOpacity="0.8" />
+    <rect x="3" y="15" width="6" height="6" fill="#10b981" stroke="none" fillOpacity="0.8" />
+    <rect x="9" y="15" width="6" height="6" fill="#3b82f6" stroke="none" fillOpacity="0.8" />
+    <rect x="15" y="15" width="6" height="6" fill="#6366f1" stroke="none" fillOpacity="0.8" />
+    <path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="currentColor" strokeOpacity="0.4" />
+    <rect x="3" y="3" width="18" height="18" rx="1" />
+  </svg>
+);
+
 const MobileView = ({
   hasStarted,
   theme,
@@ -236,12 +261,16 @@ const MobileView = ({
       {/* Bottom Nav Bar */}
       <div className="mobile-bottom-nav">
         <button className={`nav-item ${activeTab === 'board' ? 'active' : ''}`} onClick={() => setActiveTab('board')}>
-          <span className="nav-icon">🎲</span>
-          <span className="nav-label">Board</span>
+          <div className="nav-icon-container">
+            <PositionIcon size={24} />
+          </div>
+          <span className="nav-label">Position</span>
         </button>
         <button className={`nav-item ${activeTab === 'heatmap' ? 'active' : ''}`} onClick={() => setActiveTab('heatmap')}>
-          <span className="nav-icon">📊</span>
-          <span className="nav-label">Heatmap</span>
+          <div className="nav-icon-container">
+            <ScoresIcon size={24} />
+          </div>
+          <span className="nav-label">Scores</span>
         </button>
         <button className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>
           <span className="nav-icon">⚙️</span>

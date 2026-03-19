@@ -440,27 +440,38 @@ html, body {
 }
 
 .nav-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  gap: 4px;
-  transition: color 0.2s;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: none !important;
+  border: none !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.75rem !important;
+  padding: 5px 0 !important;
+  transition: all 0.2s ease !important;
+  opacity: 0.8;
 }
 
 .nav-item.active {
-  color: var(--accent-blue);
+  color: var(--accent-blue) !important;
+  opacity: 1;
+}
+
+.nav-icon-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 24px !important;
+  margin-bottom: 4px !important;
 }
 
 .nav-icon {
   font-size: 1.4rem;
+  margin-bottom: 2px;
 }
 
 .nav-label {
-  font-size: 0.75rem;
   font-weight: 500;
 }
 
