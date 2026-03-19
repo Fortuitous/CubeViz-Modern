@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo, useRef, useLayoutEffect } from 'react';
+import ReactDOM from 'react-dom';
 import HeatmapLegend from './HeatmapLegend';
 
 // Color swatches from legacy code
@@ -34,6 +35,15 @@ const getCellData = (cubeLevel, contextLine) => {
     else if (DTEq > NDEq) actionColor = '#6daed5';
   }
   return { DubErrVal, TakeErrVal, actionColor, DTEq, NDEq };
+};
+
+const ACTION_LABELS = {
+  '#979797': 'No Double / Take',
+  '#6daed5': 'Double / Take',
+  '#d92723': 'Double / Pass',
+  '#fb8d3d': 'Too Good / Pass',
+  '#ffff00': 'Too Good / Take',
+  'black':   '—',
 };
 
 const getBackgroundColor = (dataType, errVal, DTEq, NDEq, actionColor) => {
@@ -99,11 +109,52 @@ const getContrastColor = (color) => {
   return 'black';
 };
 
+const CellTooltip = ({ tooltip, cubeLevel }) => {
+  if (!tooltip) return null;
+  const { x, y, DubErrVal, TakeErrVal, actionColor } = tooltip;
+  const actionLabel = ACTION_LABELS[actionColor] || actionColor;
+  const doubleLabel = cubeLevel > 0 ? 'Redouble' : 'Double';
+
+  // Edge detection: flip left if too close to right edge, flip up if too close to bottom
+  const TW = 220; // tooltip width
+  const TH = 90;  // approx tooltip height
+  const offset = 14;
+  const left = (x + offset + TW > window.innerWidth)  ? x - TW - offset : x + offset;
+  const top  = (y + offset + TH > window.innerHeight) ? y - TH - offset : y + offset;
+
+  return ReactDOM.createPortal(
+    <div style={{
+      position: 'fixed',
+      left,
+      top,
+      width: `${TW}px`,
+      padding: '12px 14px',
+      background: 'rgba(18, 18, 30, 0.93)',
+      color: '#e8e8f0',
+      borderRadius: '7px',
+      boxShadow: '0 4px 18px rgba(0,0,0,0.5)',
+      fontSize: '14px',
+      lineHeight: '1.7',
+      pointerEvents: 'none',
+      zIndex: 9999,
+      fontFamily: 'inherit',
+      border: '1px solid rgba(255,255,255,0.1)',
+    }}>
+      <div><span style={{ color: '#aaa', marginRight: '6px' }}>{doubleLabel}:</span>{DubErrVal.toFixed(3)}</div>
+      <div><span style={{ color: '#aaa', marginRight: '6px' }}>Take:</span>{TakeErrVal.toFixed(3)}</div>
+      <div><span style={{ color: '#aaa', marginRight: '6px' }}>Action:</span>{actionLabel}</div>
+    </div>,
+    document.body
+  );
+};
+
 const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Action', globalVisibility = 'Show', showData = true, isMobile = false }) => {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [cellSize, setCellSize] = useState(25);
+  const CELL_SIZE_THRESHOLD = 25; // Stop showing numbers below this pixel size
   const [labelFontSize, setLabelFontSize] = useState(14);
   const [overriddenKeys, setOverriddenKeys] = useState(new Set());
+  const [tooltip, setTooltip] = useState(null);
   const containerRef = useRef(null); // Outermost panel
 
   useEffect(() => {
@@ -151,17 +202,22 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
 
         // Apply numerical display rules:
         // 1. Only show if currently visible.
-        // 2. If Match Length > 15, do not show numbers.
-        // 3. If absolute value of equity > 20, do not show number.
-        let finalVal = (isCurrentlyVisible && showData && valToRender !== '' && mlength <= 15 && Math.abs(valToRender) <= 20) 
+        // 2. If absolute value of equity > 20, do not show number.
+        let finalVal = (isCurrentlyVisible && showData && valToRender !== '' && Math.abs(valToRender) <= 20) 
           ? valToRender.toFixed(3) 
           : '';
+
+        // Tooltip is suppressed for hidden cells and invalid cube positions
+        const showTooltip = isCurrentlyVisible && NDEq !== 9999;
 
         cells.push({
           myneed, youneed, key, background,
           val: finalVal,
           textColor: getContrastColor(background),
-          isDiagonal: myneed === youneed
+          isDiagonal: myneed === youneed,
+          // Store raw values for tooltip
+          DubErrVal, TakeErrVal, actionColor,
+          showTooltip,
         });
       }
     }
@@ -348,13 +404,15 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
                 <React.Fragment key={"row-" + myneed}>
                   <div style={{ ...itemStyle, background: 'var(--bg-primary)', fontWeight: 'bold', color: 'var(--text-primary)' }}>{myneed}</div>
                   {rowCells.map(cell => (
-                    <div 
-                      key={cell.key} 
+                    <div
+                      key={cell.key}
                       style={{ ...itemStyle, background: cell.background, cursor: 'pointer' }}
                       onClick={() => toggleCell(cell.key)}
+                      onMouseMove={cell.showTooltip ? (e) => setTooltip({ x: e.clientX, y: e.clientY, DubErrVal: cell.DubErrVal, TakeErrVal: cell.TakeErrVal, actionColor: cell.actionColor }) : undefined}
+                      onMouseLeave={cell.showTooltip ? () => setTooltip(null) : undefined}
                     >
                       {cell.isDiagonal && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 100%)' }} />}
-                      {cell.val && <span style={{ zIndex: 1, color: cell.textColor }}>{cell.val}</span>}
+                      {cell.val && cellSize >= CELL_SIZE_THRESHOLD && <span style={{ zIndex: 1, color: cell.textColor }}>{cell.val}</span>}
                     </div>
                   ))}
                 </React.Fragment>
@@ -398,6 +456,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           }}>
             <HeatmapLegend dataType={dataType} />
           </div>
+          <CellTooltip tooltip={tooltip} cubeLevel={cubeLevel} />
         </>
       )}
     </div>
