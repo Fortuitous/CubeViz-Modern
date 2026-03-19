@@ -226,10 +226,16 @@ function App() {
   const [cubeTo, setCubeTo] = useState(() => parseInt(localStorage.getItem('cubeTo'), 10) || 2);
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
+  const isMobileDevice = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  const [isLandscape, setIsLandscape] = useState(() => window.innerHeight < window.innerWidth);
+
   // Layout routing: switch to mobile view when viewport is narrow
   const [useMobileLayout, setUseMobileLayout] = useState(() => window.innerWidth < 768);
   useEffect(() => {
-    const handleResize = () => setUseMobileLayout(window.innerWidth < 768);
+    const handleResize = () => {
+      setUseMobileLayout(window.innerWidth < 768);
+      setIsLandscape(window.innerHeight < window.innerWidth);
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -307,6 +313,19 @@ function App() {
   };
 
   const cubeLevelMap = { 2: 0, 4: 1, 8: 2, 16: 3, 32: 4 };
+
+  // Orientation Lock for Mobile
+  if (isMobileDevice && isLandscape) {
+    return (
+      <div className="orientation-warning">
+        <div className="warning-content">
+          <div className="warning-icon">🔄</div>
+          <h2>Please Rotate Your Device</h2>
+          <p>CubeViz is optimized for portrait mode on mobile.</p>
+        </div>
+      </div>
+    );
+  }
 
   // Route to mobile layout when viewport is narrow
   if (useMobileLayout) {

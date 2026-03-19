@@ -1,5 +1,44 @@
 /* Mobile-specific styles for CubeViz Modern */
 
+.orientation-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0f172a; /* Solid dark background */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
+
+.warning-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  animation: rotate-prompt 3s infinite ease-in-out;
+}
+
+.warning-content h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.warning-content p {
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+@keyframes rotate-prompt {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(-90deg); }
+  66% { transform: rotate(-90deg); }
+  100% { transform: rotate(0deg); }
+}
+
 /* Lock the body when mobile layout is active */
 /* Body lock removed to allow natural scrolling in Sticky-Fixed model */
 
