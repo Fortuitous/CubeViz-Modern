@@ -76,16 +76,28 @@ const MobileView = ({
 
   if (!hasStarted) {
     return (
-      <div className={`app-container theme-${theme} mobile-layout mobile-menu-level`}>
+      <div className={`app-container theme-${theme} mobile-layout mobile-app-level`}>
         <div className="mobile-header">
-          <div className="header-title">CubeViz Mobile</div>
+          <div className="header-title">CubeViz</div>
         </div>
-        <div className="mobile-content-scroll">
-          <div className="panel menu-panel">
-            <h3>Deck Selection</h3>
-            <p className="text-muted" style={{ fontSize: '0.85rem', marginBottom: '15px' }}>
-              Choose a deck to begin your session.
+        
+        {/* Scrollable Welcome Content */}
+        <div className="mobile-opening-main">
+          <div className="welcome-content">
+            <h2>Welcome to CubeViz</h2>
+            <p>Backgammon match data, aggregated and visualized.</p>
+            <p>
+              This app explores the effect of match-score on cube decisions by presenting cube-action data for all scores up to a 25-point match, all at once. Instead of peeking at a data point here and there (Hey XG, what about this score? What about that score?), see the pattern as a whole. Insights abound.
             </p>
+            <p>
+              Select a deck of positions below, and tap <strong>Start Session</strong>.
+            </p>
+          </div>
+        </div>
+
+        {/* Fixed Selection Footer */}
+        <div className="mobile-opening-footer">
+          <div className="panel menu-panel">
             <div className="control-group">
               <label>Select Deck:</label>
               <select value={selectedDeckId} onChange={(e) => setSelectedDeckId(e.target.value)} className="mobile-select">

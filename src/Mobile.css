@@ -188,10 +188,68 @@ html, body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Menu Level */
-.mobile-menu-level .menu-panel {
-  margin-top: 20px;
-  padding: 20px;
+/* Menu Level / Opening Page */
+.mobile-opening-main {
+  position: absolute !important;
+  top: var(--mobile-header-height) !important;
+  bottom: 210px !important; /* Room for the fixed footer widget */
+  left: 0 !important;
+  right: 0 !important;
+  overflow-y: auto !important;
+  padding: 24px 20px !important;
+  background: var(--bg-primary);
+}
+
+.welcome-content h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--accent-blue);
+  line-height: 1.2;
+}
+
+.welcome-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.mobile-opening-footer {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 210px !important;
+  background: var(--bg-panel) !important;
+  border-top: 1px solid var(--border-color) !important;
+  padding: 10px 20px !important;
+  box-sizing: border-box !important;
+  z-index: 500 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.mobile-opening-footer .menu-panel {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.mobile-opening-footer .control-group {
+  margin-bottom: 8px !important;
+}
+
+.mobile-opening-footer .mobile-primary-button {
+  margin-top: 8px !important;
+}
+
+.mobile-opening-footer .mobile-secondary-button {
+  margin-top: 6px !important;
+  padding: 6px !important;
+  font-size: 0.85rem !important;
 }
 
 .mobile-select {
