@@ -109,24 +109,36 @@ const getContrastColor = (color) => {
   return 'black';
 };
 
-const CellTooltip = ({ tooltip, cubeLevel }) => {
+const CellTooltip = ({ tooltip, cubeLevel, isMobile }) => {
   if (!tooltip) return null;
   const { x, y, DubErrVal, TakeErrVal, actionColor } = tooltip;
   const actionLabel = ACTION_LABELS[actionColor] || actionColor;
   const doubleLabel = cubeLevel > 0 ? 'Redouble' : 'Double';
 
-  // Edge detection: flip left if too close to right edge, flip up if too close to bottom
+  let left, top, bottom, transform;
   const TW = 220; // tooltip width
   const TH = 90;  // approx tooltip height
-  const offset = 14;
-  const left = (x + offset + TW > window.innerWidth)  ? x - TW - offset : x + offset;
-  const top  = (y + offset + TH > window.innerHeight) ? y - TH - offset : y + offset;
+
+  if (isMobile) {
+    left = '50%';
+    transform = 'translateX(-50%)';
+    bottom = '80px';
+    top = 'auto';
+  } else {
+    const offset = 14;
+    left = (x + offset + TW > window.innerWidth)  ? `${x - TW - offset}px` : `${x + offset}px`;
+    top  = (y + offset + TH > window.innerHeight) ? `${y - TH - offset}px` : `${y + offset}px`;
+    bottom = 'auto';
+    transform = 'none';
+  }
 
   return ReactDOM.createPortal(
-    <div style={{
+    <div onClick={(e) => e.stopPropagation()} style={{
       position: 'fixed',
       left,
       top,
+      bottom,
+      transform,
       width: `${TW}px`,
       padding: '12px 14px',
       background: 'rgba(18, 18, 30, 0.93)',
@@ -135,7 +147,7 @@ const CellTooltip = ({ tooltip, cubeLevel }) => {
       boxShadow: '0 4px 18px rgba(0,0,0,0.5)',
       fontSize: '14px',
       lineHeight: '1.7',
-      pointerEvents: 'none',
+      pointerEvents: isMobile ? 'auto' : 'none',
       zIndex: 9999,
       fontFamily: 'inherit',
       border: '1px solid rgba(255,255,255,0.1)',
@@ -243,6 +255,31 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       return next;
     });
   };
+
+  const handleCellClick = (e, cell) => {
+    if (isMobile) {
+      e.stopPropagation();
+      if (tooltip && tooltip.key === cell.key) {
+        setTooltip(null);
+      } else if (cell.showTooltip) {
+        setTooltip({ x: e.clientX, y: e.clientY, DubErrVal: cell.DubErrVal, TakeErrVal: cell.TakeErrVal, actionColor: cell.actionColor, key: cell.key });
+      }
+    } else {
+      toggleCell(cell.key);
+    }
+  };
+
+  useEffect(() => {
+    if (isMobile && tooltip) {
+      const handleDocumentClick = () => setTooltip(null);
+      document.addEventListener('click', handleDocumentClick);
+      document.addEventListener('touchstart', handleDocumentClick);
+      return () => {
+        document.removeEventListener('click', handleDocumentClick);
+        document.removeEventListener('touchstart', handleDocumentClick);
+      };
+    }
+  }, [isMobile, tooltip]);
 
   useLayoutEffect(() => {
     if (!containerRef.current) return;
@@ -423,9 +460,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
                     <div
                       key={cell.key}
                       style={{ ...itemStyle, background: cell.background, cursor: 'pointer' }}
-                      onClick={() => toggleCell(cell.key)}
-                      onMouseMove={cell.showTooltip ? (e) => setTooltip({ x: e.clientX, y: e.clientY, DubErrVal: cell.DubErrVal, TakeErrVal: cell.TakeErrVal, actionColor: cell.actionColor }) : undefined}
-                      onMouseLeave={cell.showTooltip ? () => setTooltip(null) : undefined}
+                      onClick={(e) => handleCellClick(e, cell)}
+                      onMouseMove={!isMobile && cell.showTooltip ? (e) => setTooltip({ x: e.clientX, y: e.clientY, DubErrVal: cell.DubErrVal, TakeErrVal: cell.TakeErrVal, actionColor: cell.actionColor }) : undefined}
+                      onMouseLeave={!isMobile && cell.showTooltip ? () => setTooltip(null) : undefined}
                     >
                       {cell.isDiagonal && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 100%)' }} />}
                       {cell.val && cellSize >= CELL_SIZE_THRESHOLD && <span style={{ zIndex: 1, color: cell.textColor }}>{cell.val}</span>}
@@ -472,9 +509,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           }}>
             <HeatmapLegend dataType={dataType} />
           </div>
-          <CellTooltip tooltip={tooltip} cubeLevel={cubeLevel} />
         </>
       )}
+      <CellTooltip tooltip={tooltip} cubeLevel={cubeLevel} isMobile={isMobile} />
     </div>
   );
 };
