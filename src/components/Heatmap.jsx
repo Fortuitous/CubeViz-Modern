@@ -457,10 +457,15 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
                 <React.Fragment key={"row-" + myneed}>
                   <div style={{ ...itemStyle, background: 'var(--bg-primary)', fontWeight: 'bold', color: 'var(--text-primary)' }}>{myneed}</div>
                   {rowCells.map(cell => (
-                    <div
-                      key={cell.key}
-                      style={{ ...itemStyle, background: cell.background, cursor: 'pointer' }}
-                      onClick={(e) => handleCellClick(e, cell)}
+                      <div
+                        key={cell.key}
+                        style={{ 
+                          ...itemStyle, 
+                          background: cell.background, 
+                          cursor: 'pointer',
+                          boxShadow: (isMobile && tooltip && tooltip.key === cell.key) ? 'inset 0 0 0 2px #fff, inset 0 0 0 4px #3b82f6' : 'none'
+                        }}
+                        onClick={(e) => handleCellClick(e, cell)}
                       onMouseMove={!isMobile && cell.showTooltip ? (e) => setTooltip({ x: e.clientX, y: e.clientY, DubErrVal: cell.DubErrVal, TakeErrVal: cell.TakeErrVal, actionColor: cell.actionColor }) : undefined}
                       onMouseLeave={!isMobile && cell.showTooltip ? () => setTooltip(null) : undefined}
                     >
