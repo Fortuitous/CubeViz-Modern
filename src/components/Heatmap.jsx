@@ -109,7 +109,7 @@ const getContrastColor = (color) => {
   return 'black';
 };
 
-const CellTooltip = ({ tooltip, cubeLevel, isMobile }) => {
+const CellTooltip = ({ tooltip, cubeLevel, isMobile, appTheme }) => {
   if (!tooltip) return null;
   const { x, y, DubErrVal, TakeErrVal, actionColor } = tooltip;
   const actionLabel = ACTION_LABELS[actionColor] || actionColor;
@@ -150,7 +150,7 @@ const CellTooltip = ({ tooltip, cubeLevel, isMobile }) => {
       pointerEvents: isMobile ? 'auto' : 'none',
       zIndex: 9999,
       fontFamily: 'inherit',
-      border: '1px solid rgba(255,255,255,0.1)',
+      border: (isMobile && appTheme === 'night') ? '2px solid #3b82f6' : '1px solid rgba(255,255,255,0.1)',
       display: 'grid',
       gridTemplateColumns: 'min-content 1fr',
       columnGap: '12px',
@@ -169,7 +169,7 @@ const CellTooltip = ({ tooltip, cubeLevel, isMobile }) => {
   );
 };
 
-const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Action', globalVisibility = 'Show', showData = true, isMobile = false }) => {
+const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Action', globalVisibility = 'Show', showData = true, isMobile = false, appTheme = 'night' }) => {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [cellSize, setCellSize] = useState(25);
   const CELL_SIZE_THRESHOLD = 25; // Stop showing numbers below this pixel size
@@ -516,7 +516,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           </div>
         </>
       )}
-      <CellTooltip tooltip={tooltip} cubeLevel={cubeLevel} isMobile={isMobile} />
+      <CellTooltip tooltip={tooltip} cubeLevel={cubeLevel} isMobile={isMobile} appTheme={appTheme} />
     </div>
   );
 };

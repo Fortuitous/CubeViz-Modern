@@ -431,7 +431,7 @@ function App() {
 
           <div className="right-pane">
             <div className="heatmap-main-area">
-              <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true}/>
+              <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true} appTheme={theme}/>
             </div>
 
             <div className="heatmap-controls panel">

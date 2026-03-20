@@ -203,7 +203,7 @@ const MobileView = ({
         {activeTab === 'heatmap' && (
           <div className="mobile-page heatmap-page">
             <div className="heatmap-section">
-              <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true} isMobile={true}/>
+              <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true} isMobile={true} appTheme={theme}/>
             </div>
             
             {/* Relocated Heatmap Controls */}
