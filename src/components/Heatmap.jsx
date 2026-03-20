@@ -139,10 +139,19 @@ const CellTooltip = ({ tooltip, cubeLevel }) => {
       zIndex: 9999,
       fontFamily: 'inherit',
       border: '1px solid rgba(255,255,255,0.1)',
+      display: 'grid',
+      gridTemplateColumns: 'min-content 1fr',
+      columnGap: '12px',
+      alignItems: 'baseline'
     }}>
-      <div><span style={{ color: '#aaa', marginRight: '6px' }}>{doubleLabel}:</span>{DubErrVal.toFixed(3)}</div>
-      <div><span style={{ color: '#aaa', marginRight: '6px' }}>Take:</span>{TakeErrVal.toFixed(3)}</div>
-      <div><span style={{ color: '#aaa', marginRight: '6px' }}>Action:</span>{actionLabel}</div>
+      <div style={{ color: '#aaa', justifySelf: 'end' }}>{doubleLabel}:</div>
+      <div style={{ fontFamily: 'monospace', whiteSpace: 'pre' }}>{DubErrVal.toFixed(3).padStart(8, ' ')}</div>
+      
+      <div style={{ color: '#aaa', justifySelf: 'end' }}>Take:</div>
+      <div style={{ fontFamily: 'monospace', whiteSpace: 'pre' }}>{TakeErrVal.toFixed(3).padStart(8, ' ')}</div>
+      
+      <div style={{ color: '#aaa', justifySelf: 'end' }}>Action:</div>
+      <div style={{ justifySelf: 'start' }}>{actionLabel}</div>
     </div>,
     document.body
   );
