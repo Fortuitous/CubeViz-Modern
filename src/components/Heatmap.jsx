@@ -247,6 +247,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
   useLayoutEffect(() => {
     if (!containerRef.current) return;
 
+    let currentCellSize = cellSize;
+    let currentLabelFontSize = labelFontSize;
+
     const updateSize = () => {
       const el = containerRef.current;
       if (!el) return;
@@ -260,7 +263,10 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
 
       // Label Scaling: Reduced size for relocated legend layout
       const calculatedLabelSize = Math.max(10, Math.floor(unitSize / 35));
-      setLabelFontSize(calculatedLabelSize);
+      if (calculatedLabelSize !== currentLabelFontSize) {
+        setLabelFontSize(calculatedLabelSize);
+        currentLabelFontSize = calculatedLabelSize;
+      }
       
       const gaps = actualLength - 1;
       
@@ -269,8 +275,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       const overhead = isMobile ? 25 : 40; // Less overhead for row headers on mobile
       const cellPx = Math.floor((unitSize - gaps - overhead) / totalUnits);
       
-      if (cellPx > 2) {
+      if (cellPx > 2 && cellPx !== currentCellSize) {
         setCellSize(cellPx);
+        currentCellSize = cellPx;
       }
     };
 
@@ -283,7 +290,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       observer.disconnect();
       window.removeEventListener('resize', updateSize);
     };
-  }, [actualLength, dataLoaded]);
+  }, [actualLength, dataLoaded, isMobile]);
 
   if (!dataLoaded) {
     return (
