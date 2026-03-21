@@ -226,6 +226,8 @@ function App() {
   const [cubeTo, setCubeTo] = useState(() => parseInt(localStorage.getItem('cubeTo'), 10) || 2);
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
+  const isMobileDevice = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+
   const getIsMobile = () => {
     const { innerWidth: w, innerHeight: h } = window;
     // Mobile if narrow (phones) OR if it's a portrait tablet (w < h and w is tablet-sized)
