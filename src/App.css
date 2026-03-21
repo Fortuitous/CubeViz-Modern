@@ -382,7 +382,8 @@ html, body {
   }
   
   .left-pane {
-    flex: 0 0 360px !important;
+    flex: 0 0 370px !important;
+    padding: 0 0.75rem 10px 0.75rem !important;
   }
   
   /* Unify constraints for all side columns to ensure horizontal alignment */
