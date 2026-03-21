@@ -382,7 +382,7 @@ html, body {
   }
   
   .left-pane {
-    flex: 0 0 390px !important;
+    flex: 0 0 400px !important;
     padding: 0 0.75rem 10px 0.75rem !important;
     font-size: 0.94rem !important;
   }
