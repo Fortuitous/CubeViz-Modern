@@ -440,6 +440,10 @@ function App() {
               <Heatmap positionIndex={cardsInDeck[currentCardIndex]} mlength={heatmapMatchLength} dataType={heatmapDataType} cubeLevel={cubeLevelMap[cubeTo]} globalVisibility={heatmapDataVisibility} showData={true} appTheme={theme}/>
             </div>
 
+            <div style={{ color: 'red', fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', margin: '10px 0', zIndex: 1000 }}>
+              TEST
+            </div>
+
             <div className="heatmap-controls panel">
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
                 <div className="section-title">Heatmap Controls</div>
