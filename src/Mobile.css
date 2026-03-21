@@ -344,7 +344,7 @@ html, body {
 /* Board Page Styles */
 .board-section {
   width: 100%;
-  max-width: 100%;
+  max-width: calc(48vh * 1.254); /* Prevent clipping by limiting width based on height cap */
   max-height: 48vh;
   aspect-ratio: 1.254 / 1; /* Match 908/724 board aspect ratio */
   background: var(--bg-panel);
