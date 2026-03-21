@@ -425,16 +425,16 @@ function App() {
 
             <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={decks.find(d => d.DeckID === parseInt(selectedDeckId, 10))?.DeckName || ''} />
 
-            <div className="panel nav-panel" style={{ marginTop: '20px' }}>
+            <div className="panel nav-panel" style={{ marginTop: 'auto' }}>
               <div className="position-nav-buttons">
                 <button className="panel-button" onClick={handlePrevPosition} disabled={currentCardIndex === 0}>Prev</button>
                 <div className="pos-indicator" style={{ display: 'flex', alignItems: 'center', fontWeight: 'bold' }}>{currentCardIndex + 1} / {cardsInDeck.length}</div>
-                <button className="panel-button" onClick={handleNextPosition} disabled={currentCardIndex === cardsInDeck.length - 1 || cardsInDeck.length === 0}>Next</button>
+                <button className="panel-button" onClick={handleNextPosition} disabled={currentCardIndex === currentCardIndex === (cardsInDeck.length - 1) || cardsInDeck.length === 0}>Next</button>
               </div>
               <button onClick={handleBackToSelection} className="panel-button" style={{ width: '100%', marginTop: '10px' }}>← New Deck</button>
             </div>
-            {/* Massive spacer to ensure the button can scroll above browser toolbars */}
-            <div style={{ height: '60px', flexShrink: 0 }}></div>
+            {/* Conditional spacer for iPad/Mobile ONLY - hidden via CSS on desktop */}
+            <div className="tablet-spacer" style={{ flexShrink: 0 }}></div>
           </div>
 
           <div className="right-pane">
