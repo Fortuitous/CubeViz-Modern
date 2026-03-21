@@ -123,59 +123,80 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
           
           <tr>
             <td width="80"><b className="text-bold">Actions:</b></td>
-            <td width="85" className={getEqClass(moneyDEr)}>{actionDouble}</td>
-            <td width="60" className={getEqClass(moneyDEr)}>{formatEq(parseFloat(moneyDEr))}</td>
-            <td width="10"></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>(No Jacoby)</td>
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span className={getEqClass(moneyDEr)} style={{ minWidth: '85px' }}>{actionDouble}</span>
+                <span className={getEqClass(moneyDEr)} style={{ minWidth: '60px' }}>{formatEq(parseFloat(moneyDEr))}</span>
+                <span style={{ color: 'var(--text-secondary)', marginLeft: '10px' }}>(No Jacoby)</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td></td>
-            <td className={getEqClass(moneyRDEr)}>{actionRedouble}</td>
-            <td className={getEqClass(moneyRDEr)}>{formatEq(parseFloat(moneyRDEr))}</td>
-            <td></td>
-            <td width="50" className={getEqClass(moneyDPEr)}>{formatEq(parseFloat(moneyDPEr))}</td>
-            <td className={getEqClass(moneyDPEr)} style={{ whiteSpace: 'nowrap' }}>{takePass}</td>
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span className={getEqClass(moneyRDEr)} style={{ minWidth: '85px' }}>{actionRedouble}</span>
+                <span className={getEqClass(moneyRDEr)} style={{ minWidth: '60px' }}>{formatEq(parseFloat(moneyRDEr))}</span>
+                <span className={getEqClass(moneyDPEr)} style={{ marginLeft: '10px', minWidth: '50px' }}>{formatEq(parseFloat(moneyDPEr))}</span>
+                <span className={getEqClass(moneyDPEr)}>{takePass}</span>
+              </div>
+            </td>
           </tr>
 
           <tr><td colSpan="6" style={{ height: '12px' }}></td></tr>
 
           <tr>
             <td><b className="text-bold">Equities:</b></td>
-            <td style={{ whiteSpace: 'nowrap' }}>No Double</td>
-            <td>{formatEq(ndEq)}</td>
-            <td colSpan="3"></td>
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span style={{ minWidth: '153px' }}>No Double</span>
+                <span>{formatEq(ndEq)}</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td></td>
-            <td style={{ whiteSpace: 'nowrap' }}>No Redouble</td>
-            <td>{formatEq(nrdEq)}</td>
-            <td colSpan="3"></td>
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span style={{ minWidth: '153px' }}>No Redouble</span>
+                <span>{formatEq(nrdEq)}</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td></td>
-            <td style={{ whiteSpace: 'nowrap' }}>Double/{takePass}</td>
-            <td>{formatEq(dtEq)}</td>
-            <td colSpan="3"></td>
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span style={{ minWidth: '153px' }}>Double/{takePass}</span>
+                <span>{formatEq(dtEq)}</span>
+              </div>
+            </td>
           </tr>
 
           <tr><td colSpan="6" style={{ height: '12px' }}></td></tr>
 
           <tr>
             <td><b className="text-bold">Outcomes:</b></td>
-            <td>Win%</td>
-            <td>{formatPct(outcome.PlainW)}</td>
-            <td></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
-              ({formatPct(outcome.GammonW)}, {formatPct(outcome.BackgammonW)})
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span style={{ minWidth: '85px' }}>Win%</span>
+                <span style={{ minWidth: '60px' }}>{formatPct(outcome.PlainW)}</span>
+                <span style={{ color: 'var(--text-secondary)', marginLeft: '10px' }}>
+                  ({formatPct(outcome.GammonW)}, {formatPct(outcome.BackgammonW)})
+                </span>
+              </div>
             </td>
           </tr>
           <tr>
             <td></td>
-            <td>Loss%</td>
-            <td>{formatPct(outcome.PlainL)}</td>
-            <td></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
-              ({formatPct(outcome.GammonL)}, {formatPct(outcome.BackgammonL)})
+            <td colSpan="5">
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
+                <span style={{ minWidth: '85px' }}>Loss%</span>
+                <span style={{ minWidth: '60px' }}>{formatPct(outcome.PlainL)}</span>
+                <span style={{ color: 'var(--text-secondary)', marginLeft: '10px' }}>
+                  ({formatPct(outcome.GammonL)}, {formatPct(outcome.BackgammonL)})
+                </span>
+              </div>
             </td>
           </tr>
         </tbody>
