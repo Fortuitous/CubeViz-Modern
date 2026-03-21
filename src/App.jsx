@@ -320,8 +320,8 @@ function App() {
 
   const cubeLevelMap = { 2: 0, 4: 1, 8: 2, 16: 3, 32: 4 };
 
-  // Orientation Lock for Mobile
-  if (isMobileDevice && isLandscape) {
+  // Orientation Lock for Mobile (Phones only)
+  if (isMobileDevice && isLandscape && window.innerWidth < 768) {
     return (
       <div className="orientation-warning">
         <div className="warning-content">

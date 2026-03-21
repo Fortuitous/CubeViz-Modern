@@ -387,13 +387,12 @@ html, body {
     font-size: 0.94rem !important;
   }
   
-  /* Unify constraints for all side columns to ensure horizontal alignment */
   .left-pane, .right-pane {
     height: 100vh !important;
     height: 100dvh !important;
     box-sizing: border-box !important;
-    padding-bottom: 10px !important; 
-    margin-bottom: 4px !important; 
+    padding-bottom: env(safe-area-inset-bottom, 32px) !important; /* Increased clearance for bottom toolbars */
+    margin-bottom: 0 !important;
   }
 }
 
