@@ -1,7 +1,7 @@
 /* Base Layout Structure */
 html, body {
   height: 100% !important;
-  height: 100vh !important;
+  height: 100dvh !important;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ html, body {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
   overflow: hidden;
   background-color: var(--bg-primary);
@@ -35,6 +36,7 @@ html, body {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   gap: 1rem;
   padding: 10px 1rem 10px 1rem;
@@ -388,6 +390,7 @@ html, body {
   
   .left-pane, .right-pane {
     height: 100vh !important;
+    height: 100dvh !important;
     box-sizing: border-box !important;
     padding-bottom: env(safe-area-inset-bottom, 15px) !important;
     margin-bottom: 0 !important;
