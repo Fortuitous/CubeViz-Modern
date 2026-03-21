@@ -391,6 +391,15 @@ html, body {
     padding-bottom: env(safe-area-inset-bottom, 15px) !important;
     margin-bottom: 0 !important;
   }
+
+  .ios-scroll-buffer {
+    display: block !important;
+    height: 80px !important;
+  }
+}
+
+.ios-scroll-buffer {
+  display: none;
 }
 
 .welcome-content {

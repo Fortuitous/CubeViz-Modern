@@ -438,8 +438,8 @@ function App() {
               </div>
               <button onClick={handleBackToSelection} className="panel-button" style={{ width: '100%', marginTop: '10px' }}>← New Deck</button>
             </div>
-            {/* Conditional spacer for iPad/Mobile ONLY - hidden via CSS on desktop */}
-            <div className="tablet-spacer" style={{ flexShrink: 0 }}></div>
+            {/* Scroll buffer for iPads/Mobile to clear floating Safari toolbars */}
+            <div className="ios-scroll-buffer" style={{ flexShrink: 0 }}></div>
           </div>
 
           <div className="right-pane">
