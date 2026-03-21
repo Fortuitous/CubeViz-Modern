@@ -226,15 +226,19 @@ function App() {
   const [cubeTo, setCubeTo] = useState(() => parseInt(localStorage.getItem('cubeTo'), 10) || 2);
   const [heatmapDataVisibility, setHeatmapDataVisibility] = useState(() => localStorage.getItem('heatmapDataVisibility') || 'Show');
 
-  const isMobileDevice = /Mobi|Android|iPhone/i.test(navigator.userAgent);
-  const [isLandscape, setIsLandscape] = useState(() => window.innerHeight < window.innerWidth);
+  const getIsMobile = () => {
+    const { innerWidth: w, innerHeight: h } = window;
+    // Mobile if narrow (phones) OR if it's a portrait tablet (w < h and w is tablet-sized)
+    return w < 768 || (w < 1025 && w < h);
+  };
 
-  // Layout routing: switch to mobile view when viewport is narrow
-  const [useMobileLayout, setUseMobileLayout] = useState(() => window.innerWidth < 768);
+  const [useMobileLayout, setUseMobileLayout] = useState(getIsMobile);
+  const [isLandscape, setIsLandscape] = useState(() => window.innerWidth > window.innerHeight);
+
   useEffect(() => {
     const handleResize = () => {
-      setUseMobileLayout(window.innerWidth < 768);
-      setIsLandscape(window.innerHeight < window.innerWidth);
+      setUseMobileLayout(getIsMobile());
+      setIsLandscape(window.innerWidth > window.innerHeight);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

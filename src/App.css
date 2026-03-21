@@ -24,6 +24,9 @@ html, body {
   flex: 0 0 412px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
   overflow-y: auto;
   border-right: 1px solid var(--border-color);
   padding: 0 1rem 10px 1rem;
@@ -372,6 +375,14 @@ html, body {
   padding: 40px;
   background-color: var(--bg-primary);
   overflow-y: auto;
+}
+
+/* Isolated Tablet Fixes (Portrait & Landscape iPads) */
+@media screen and (max-width: 1024px) {
+  .app-container {
+    /* Use env() to detect iPad Home Indicator, safe for other browsers */
+    padding-bottom: env(safe-area-inset-bottom, 10px);
+  }
 }
 
 .welcome-content {
