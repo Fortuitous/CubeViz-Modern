@@ -425,7 +425,7 @@ function App() {
 
             <PositionDetails cardId={cardsInDeck[currentCardIndex]} matchLength={heatmapMatchLength} deckName={decks.find(d => d.DeckID === parseInt(selectedDeckId, 10))?.DeckName || ''} />
 
-            <div className="panel nav-panel" style={{ marginTop: 'auto' }}>
+            <div className="panel nav-panel">
               <div className="position-nav-buttons">
                 <button className="panel-button" onClick={handlePrevPosition} disabled={currentCardIndex === 0}>Prev</button>
                 <div className="pos-indicator" style={{ display: 'flex', alignItems: 'center', fontWeight: 'bold' }}>{currentCardIndex + 1} / {cardsInDeck.length}</div>
