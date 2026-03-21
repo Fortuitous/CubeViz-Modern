@@ -191,15 +191,15 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
 };
 
 const themeData = {
-  1: { name: "Christmas", thumb: "/theme-thumbs/Christmas.png" },
-  2: { name: "Butter", thumb: "/theme-thumbs/Butter.png" },
-  3: { name: "Business", thumb: "/theme-thumbs/RedWhite.png" },
-  4: { name: "Earth", thumb: "/theme-thumbs/Earth.png" },
-  5: { name: "Sand", thumb: "/theme-thumbs/Sand.png" },
-  6: { name: "Vineyard", thumb: "/theme-thumbs/Vineyard.png" },
-  7: { name: "Lorax", thumb: "/theme-thumbs/Lorax.png" },
-  8: { name: "Attache", thumb: "/theme-thumbs/Attache.png" },
-  9: { name: "Sunset", thumb: "/theme-thumbs/Sunset.png" },
+  1: { name: "Christmas", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Christmas.png` },
+  2: { name: "Butter", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Butter.png` },
+  3: { name: "Business", thumb: `${import.meta.env.BASE_URL}theme-thumbs/RedWhite.png` },
+  4: { name: "Earth", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Earth.png` },
+  5: { name: "Sand", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Sand.png` },
+  6: { name: "Vineyard", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Vineyard.png` },
+  7: { name: "Lorax", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Lorax.png` },
+  8: { name: "Attache", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Attache.png` },
+  9: { name: "Sunset", thumb: `${import.meta.env.BASE_URL}theme-thumbs/Sunset.png` },
 };
 
 function App() {
