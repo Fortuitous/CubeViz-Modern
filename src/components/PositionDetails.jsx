@@ -123,10 +123,10 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
           
           <tr>
             <td width="80"><b className="text-bold">Actions:</b></td>
-            <td width="100" className={getEqClass(moneyDEr)}>{actionDouble}</td>
+            <td width="85" className={getEqClass(moneyDEr)}>{actionDouble}</td>
             <td width="60" className={getEqClass(moneyDEr)}>{formatEq(parseFloat(moneyDEr))}</td>
             <td width="10"></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)' }}>(No Jacoby)</td>
+            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>(No Jacoby)</td>
           </tr>
           <tr>
             <td></td>
@@ -134,26 +134,26 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
             <td className={getEqClass(moneyRDEr)}>{formatEq(parseFloat(moneyRDEr))}</td>
             <td></td>
             <td width="50" className={getEqClass(moneyDPEr)}>{formatEq(parseFloat(moneyDPEr))}</td>
-            <td className={getEqClass(moneyDPEr)}>{takePass}</td>
+            <td className={getEqClass(moneyDPEr)} style={{ whiteSpace: 'nowrap' }}>{takePass}</td>
           </tr>
 
           <tr><td colSpan="6" style={{ height: '12px' }}></td></tr>
 
           <tr>
             <td><b className="text-bold">Equities:</b></td>
-            <td>No Double</td>
+            <td style={{ whiteSpace: 'nowrap' }}>No Double</td>
             <td>{formatEq(ndEq)}</td>
             <td colSpan="3"></td>
           </tr>
           <tr>
             <td></td>
-            <td>No Redouble</td>
+            <td style={{ whiteSpace: 'nowrap' }}>No Redouble</td>
             <td>{formatEq(nrdEq)}</td>
             <td colSpan="3"></td>
           </tr>
           <tr>
             <td></td>
-            <td>Double/{takePass}</td>
+            <td style={{ whiteSpace: 'nowrap' }}>Double/{takePass}</td>
             <td>{formatEq(dtEq)}</td>
             <td colSpan="3"></td>
           </tr>
@@ -165,7 +165,7 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
             <td>Win%</td>
             <td>{formatPct(outcome.PlainW)}</td>
             <td></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)' }}>
+            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
               ({formatPct(outcome.GammonW)}, {formatPct(outcome.BackgammonW)})
             </td>
           </tr>
@@ -174,7 +174,7 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
             <td>Loss%</td>
             <td>{formatPct(outcome.PlainL)}</td>
             <td></td>
-            <td colSpan="2" style={{ color: 'var(--text-secondary)' }}>
+            <td colSpan="2" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
               ({formatPct(outcome.GammonL)}, {formatPct(outcome.BackgammonL)})
             </td>
           </tr>
