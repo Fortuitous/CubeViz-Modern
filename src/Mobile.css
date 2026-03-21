@@ -6,7 +6,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  height: 100dvh;
   background: #0f172a; /* Solid dark background */
   z-index: 9999;
   display: flex;
@@ -109,7 +108,6 @@
 /* Final Robust Strategy: Absolute Anchor Model */
 html, body {
   height: 100% !important;
-  height: 100dvh !important;
   width: 100% !important;
   overflow: hidden !important;
   position: fixed !important; /* Prevents address bar shifts */
