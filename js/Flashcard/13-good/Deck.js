@@ -1,0 +1,55 @@
+function makeDeck(DeckName, DeckSetID, IsSample)
+{
+this.DeckName = DeckName;
+this.DeckSetID = DeckSetID;
+this.IsSample = IsSample;
+}
+
+var Deck = new Array ("");
+Deck[0] = new makeDeck("Money", 0, 0);
+Deck[1] = new makeDeck("DMP, GG, GS", 0, 0);
+Deck[2] = new makeDeck("Other Scores", 0, 0);
+Deck[3] = new makeDeck("Two-Checker", 1, 0);
+Deck[4] = new makeDeck("Three-Checker", 1, 0);
+Deck[5] = new makeDeck("Five Point Match", 2, 0);
+Deck[6] = new makeDeck("Nine Point Match", 2, 0);
+Deck[7] = new makeDeck("Five Point Match", 3, 0);
+Deck[8] = new makeDeck("Nine Point Match", 3, 0);
+Deck[9] = new makeDeck("Non-Dub: Rules", 4, 0);
+Deck[10] = new makeDeck("Non-Dub: Positions", 4, 0);
+Deck[11] = new makeDeck("Non-Dub: Exceptions", 4, 0);
+Deck[12] = new makeDeck("Doubles: Rules", 4, 0);
+Deck[13] = new makeDeck("Doubles: Positions", 4, 0);
+Deck[14] = new makeDeck("Doubles: Exceptions", 4, 0);
+Deck[15] = new makeDeck("DMP Replies", 4, 0);
+Deck[16] = new makeDeck("GG Replies", 4, 0);
+Deck[17] = new makeDeck("GS Replies", 4, 0);
+Deck[18] = new makeDeck("Sample Replies", 4, 1)
+Deck[19] = new makeDeck("Basic Training", 5, 0);
+Deck[20] = new makeDeck("Advanced Training", 5, 0);
+Deck[21] = new makeDeck("Cubes And Races", 5, 0);
+Deck[22] = new makeDeck("Cubes And Contact", 5, 0);
+Deck[23] = new makeDeck("Backgames", 5, 0);
+Deck[24] = new makeDeck("Primes", 5, 0);
+Deck[25] = new makeDeck("Attacking Play", 5, 0);
+Deck[26] = new makeDeck("Match Play", 5, 0);
+Deck[27] = new makeDeck("Sample Boot Camp", 5, 1);
+Deck[28] = new makeDeck("Long Races", 6, 0);
+Deck[29] = new makeDeck("Short Races", 6, 0);
+Deck[30] = new makeDeck("Favorites", 7, 0);
+Deck[31] = new makeDeck("Blitz", 8, 0);
+Deck[32] = new makeDeck("Holding Games", 8, 0);
+Deck[33] = new makeDeck("Anchor Games", 8, 0);
+Deck[34] = new makeDeck("Priming Games", 8, 0);
+Deck[35] = new makeDeck("Back Games", 8, 0);
+Deck[36] = new makeDeck("One Checker Up", 8, 0);
+Deck[37] = new makeDeck("Containment", 8, 0);
+Deck[38] = new makeDeck("Post-Ace-Point Games", 8, 0);
+Deck[39] = new makeDeck("Races", 8, 0);
+Deck[40] = new makeDeck("Sample Encyclopedia", 8, 1);
+Deck[41] = new makeDeck("No Gammons", 9, 0);
+Deck[42] = new makeDeck("Low Gammons", 9, 0);
+Deck[43] = new makeDeck("High Gammons", 9, 0);
+Deck[44] = new makeDeck("No Gammons", 10, 0);
+Deck[45] = new makeDeck("Low Gammons", 10, 0);
+Deck[46] = new makeDeck("High Gammons", 10, 0);
