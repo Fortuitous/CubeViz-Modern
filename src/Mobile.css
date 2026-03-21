@@ -344,6 +344,8 @@ html, body {
 /* Board Page Styles */
 .board-section {
   width: 100%;
+  max-width: 100%;
+  max-height: 48vh;
   aspect-ratio: 1.254 / 1; /* Match 908/724 board aspect ratio */
   background: var(--bg-panel);
   border-radius: 12px;
@@ -351,6 +353,7 @@ html, body {
   border: 1px solid var(--border-color);
   overflow: hidden;
   display: block; /* Avoid flex-child collapse */
+  margin: 0 auto;
 }
 
 .board-section svg {
