@@ -381,13 +381,12 @@ html, body {
     padding-bottom: env(safe-area-inset-bottom, 15px);
   }
   
-  .left-pane {
-    /* Force height constraint ONLY for tablet viewports */
-    height: 100vh;
-    height: 100dvh;
-    box-sizing: border-box;
-    /* Extra margin to ensure the New Deck button is clearly off the bottom edge */
-    padding-bottom: 20px !important; 
+  /* Unify constraints for all side columns to ensure horizontal alignment */
+  .left-pane, .right-pane {
+    height: 100vh !important;
+    height: 100dvh !important;
+    box-sizing: border-box !important;
+    padding-bottom: 10px !important; 
   }
 }
 
