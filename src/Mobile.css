@@ -107,21 +107,6 @@
 
 /* Root Layout Strategy: Sticky/Fixed */
 /* Final Robust Strategy: Absolute Anchor Model */
-html, body {
-  height: 100% !important;
-  height: 100dvh !important;
-  width: 100% !important;
-  overflow: hidden !important;
-  position: fixed !important; /* Prevents address bar shifts */
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#root, .app-container {
-  height: 100% !important;
-  width: 100% !important;
-  overflow: hidden !important;
-}
 
 .mobile-app-level {
   position: fixed !important;
