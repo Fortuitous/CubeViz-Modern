@@ -382,8 +382,9 @@ html, body {
   }
   
   .left-pane {
-    flex: 0 0 370px !important;
+    flex: 0 0 375px !important;
     padding: 0 0.75rem 10px 0.75rem !important;
+    font-size: 0.94rem !important; /* Slight reduction for iPad landscape density */
   }
   
   /* Unify constraints for all side columns to ensure horizontal alignment */
