@@ -339,17 +339,16 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
 
   const { cells: gridCells } = gridCellsData;
   const trackSize = `${cellSize}px`;
-
   const itemStyle = {
-    width: isMobile ? '100.2%' : trackSize, // Tiny overlap to ensure no 1px gaps between rows
-    height: isMobile ? 'auto' : trackSize,
-    aspectRatio: isMobile ? '1 / 1' : 'auto',
+    width: trackSize, 
+    height: trackSize,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
     fontSize: `${Math.max(6, Math.floor(cellSize * 0.35))}px`,
-    lineHeight: 1
+    lineHeight: 1,
+    boxSizing: 'border-box'
   };
 
   return (
@@ -362,8 +361,9 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       flexDirection: 'column', 
       minWidth: isMobile ? '100%' : 0, 
       minHeight: 0,
-      padding: isMobile ? '8px 1px' : '8px 16px',
-      position: 'relative'
+      padding: isMobile ? '4px 1px' : '8px 16px', // Reduced top padding to help "Taker Needs" visibility
+      position: 'relative',
+      justifyContent: 'center'
     }}>
       {!isMobile && (
         <div style={{
@@ -379,12 +379,11 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         </div>
       )}
       <div style={{ 
-        flex: 1, 
         width: '100%', 
         display: 'flex', 
         flexDirection: 'column',
         justifyContent: 'center', 
-        alignItems: isMobile ? 'stretch' : 'center', // Stretch to fill width on mobile
+        alignItems: 'center',
         overflow: 'hidden',
         gap: '2px'
       }}>
@@ -393,12 +392,13 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
           width: '100%', 
           textAlign: 'center', 
           fontWeight: 'bold', 
-          fontSize: isMobile ? '0.85rem' : `${labelFontSize}px`,
+          fontSize: isMobile ? '0.8rem' : `${labelFontSize}px`,
           // Offset for vertical label + row headers
-          paddingLeft: isMobile ? `${100 / actualLength}%` : `${labelFontSize * 2}px`, 
+          paddingLeft: isMobile ? trackSize : `${labelFontSize * 2}px`, 
           color: 'var(--text-primary)',
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
+          marginBottom: '2px'
         }}>
           Taker Needs
         </div>
@@ -406,8 +406,8 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
-          gap: isMobile ? '0' : '8px',
-          width: isMobile ? '100%' : 'auto'
+          gap: isMobile ? '4px' : '8px',
+          width: 'auto'
         }}>
           {/* Doubler Needs Vertical Label (Desktop Only) */}
           {!isMobile && (
@@ -428,20 +428,20 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
             </div>
           )}
 
-          {/* Corrected Grid with explicit tracks */}
+          {/* Grid with unified tracks */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? `repeat(${actualLength}, 1fr)` : `repeat(${actualLength}, ${trackSize})`,
-            gridTemplateRows: isMobile ? 'auto' : `repeat(${actualLength}, ${trackSize})`,
-            gap: isMobile ? '0' : '1px', // 0 gap on mobile for maximum volume
+            gridTemplateColumns: `repeat(${actualLength}, ${trackSize})`,
+            gridTemplateRows: `repeat(${actualLength}, ${trackSize})`,
+            gap: '1px',
             backgroundColor: 'var(--border-color)',
             border: 'none',
-            borderRadius: isMobile ? '0' : '4px',
+            borderRadius: '4px',
             overflow: 'hidden',
-            width: isMobile ? '100%' : 'max-content',
+            width: 'max-content',
             height: 'max-content',
             boxSizing: 'border-box',
-            margin: isMobile ? '0' : '0 auto' // Ensure no side margins on mobile
+            margin: '0 auto' 
           }}>
             {/* Top Left Empty Corner */}
             <div style={{ ...itemStyle, background: 'var(--bg-primary)' }}></div>

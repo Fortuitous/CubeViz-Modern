@@ -198,13 +198,14 @@ html, body {
 
 .heatmap-section {
   width: 100% !important;
-  max-height: 48vh;
+  max-height: 50vh; /* Increased slightly for headers */
   padding: 0 !important;
   margin: 0 !important;
   flex-shrink: 0 !important;
   display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   justify-content: center !important;
-  overflow: hidden !important;
 }
 
 .mobile-heatmap-controls {
