@@ -295,7 +295,7 @@ const Heatmap = ({ positionIndex, mlength = 15, cubeLevel = 0, dataType = 'Actio
       
       // Calculate available space inside the .panel.glass
       const availableWidth = isMobile ? rect.width : rect.width - 32; 
-      const availableHeight = isMobile ? window.innerHeight : rect.height - 110; 
+      const availableHeight = isMobile ? rect.height : rect.height - 110; 
       const unitSize = Math.min(availableWidth, availableHeight);
 
       // Label Scaling: Reduced size for relocated legend layout
