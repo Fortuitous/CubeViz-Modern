@@ -241,12 +241,7 @@ function App() {
     const handleResize = () => {
       setUseMobileLayout(getIsMobile());
       setIsLandscape(window.innerWidth > window.innerHeight);
-      document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
     };
-    
-    // Initial set
-    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
-    
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -438,8 +433,6 @@ function App() {
               </div>
               <button onClick={handleBackToSelection} className="panel-button" style={{ width: '100%', marginTop: '10px' }}>← New Deck</button>
             </div>
-            {/* Scroll buffer for iPads/Mobile to clear floating Safari toolbars */}
-            <div className="ios-scroll-buffer" style={{ flexShrink: 0 }}></div>
           </div>
 
           <div className="right-pane">

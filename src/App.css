@@ -1,7 +1,8 @@
 /* Base Layout Structure */
 html, body {
   height: 100% !important;
-  height: var(--app-height, 100vh) !important;
+  height: 100vh !important;
+  height: -webkit-fill-available !important;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -11,7 +12,8 @@ html, body {
 .app-container {
   display: flex;
   flex-direction: row;
-  height: var(--app-height, 100vh);
+  height: 100vh;
+  height: -webkit-fill-available;
   width: 100vw;
   overflow: hidden;
   background-color: var(--bg-primary);
@@ -34,7 +36,8 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: row;
-  height: var(--app-height, 100vh);
+  height: 100vh;
+  height: -webkit-fill-available;
   overflow: hidden;
   gap: 1rem;
   padding: 10px 1rem 10px 1rem;
@@ -386,20 +389,12 @@ html, body {
   }
   
   .left-pane, .right-pane {
-    height: var(--app-height, 100vh) !important;
+    height: 100vh !important;
+    height: -webkit-fill-available !important;
     box-sizing: border-box !important;
     padding-bottom: env(safe-area-inset-bottom, 15px) !important;
     margin-bottom: 0 !important;
   }
-
-  .ios-scroll-buffer {
-    display: block !important;
-    height: 80px !important;
-  }
-}
-
-.ios-scroll-buffer {
-  display: none;
 }
 
 .welcome-content {
