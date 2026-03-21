@@ -178,9 +178,9 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
           <tr>
             <td><b className="text-bold">Outcomes:</b></td>
             <td colSpan="5">
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
-                <span style={{ minWidth: '85px' }}>Win%</span>
-                <span style={{ minWidth: '60px' }}>{formatPct(outcome.PlainW)}</span>
+              <div style={{ display: 'block', width: 'max-content', whiteSpace: 'nowrap' }}>
+                <span style={{ display: 'inline-block', minWidth: '85px' }}>Win%</span>
+                <span style={{ display: 'inline-block', minWidth: '60px' }}>{formatPct(outcome.PlainW)}</span>
                 <span style={{ color: 'var(--text-secondary)', marginLeft: '10px' }}>
                   ({formatPct(outcome.GammonW)}, {formatPct(outcome.BackgammonW)})
                 </span>
@@ -190,9 +190,9 @@ const PositionDetails = ({ cardId, matchLength, deckName }) => {
           <tr>
             <td></td>
             <td colSpan="5">
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
-                <span style={{ minWidth: '85px' }}>Loss%</span>
-                <span style={{ minWidth: '60px' }}>{formatPct(outcome.PlainL)}</span>
+              <div style={{ display: 'block', width: 'max-content', whiteSpace: 'nowrap' }}>
+                <span style={{ display: 'inline-block', minWidth: '85px' }}>Loss%</span>
+                <span style={{ display: 'inline-block', minWidth: '60px' }}>{formatPct(outcome.PlainL)}</span>
                 <span style={{ color: 'var(--text-secondary)', marginLeft: '10px' }}>
                   ({formatPct(outcome.GammonL)}, {formatPct(outcome.BackgammonL)})
                 </span>
