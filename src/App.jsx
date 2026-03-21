@@ -241,7 +241,12 @@ function App() {
     const handleResize = () => {
       setUseMobileLayout(getIsMobile());
       setIsLandscape(window.innerWidth > window.innerHeight);
+      document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
     };
+    
+    // Initial set
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+    
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
