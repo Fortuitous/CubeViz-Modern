@@ -387,6 +387,7 @@ html, body {
     height: 100dvh !important;
     box-sizing: border-box !important;
     padding-bottom: 10px !important; 
+    margin-bottom: 4px !important; /* Adding margin here to match center/right offsets */
   }
 }
 
