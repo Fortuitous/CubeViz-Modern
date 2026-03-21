@@ -381,13 +381,17 @@ html, body {
     padding-bottom: env(safe-area-inset-bottom, 15px);
   }
   
+  .left-pane {
+    flex: 0 0 340px !important;
+  }
+  
   /* Unify constraints for all side columns to ensure horizontal alignment */
   .left-pane, .right-pane {
     height: 100vh !important;
     height: 100dvh !important;
     box-sizing: border-box !important;
     padding-bottom: 10px !important; 
-    margin-bottom: 4px !important; /* Adding margin here to match center/right offsets */
+    margin-bottom: 4px !important; 
   }
 }
 
