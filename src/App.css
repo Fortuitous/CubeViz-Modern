@@ -26,8 +26,7 @@ html, body {
   flex-direction: column;
   overflow-y: auto;
   border-right: 1px solid var(--border-color);
-  padding: 0 1rem 10px 1rem;
-  margin-top: 10px;
+  padding: 10px 1rem; /* Use padding instead of margin for internal spacing */
   background-color: var(--bg-primary);
 }
 
@@ -81,7 +80,7 @@ html, body {
 
 .nav-panel {
   margin-bottom: 0 !important;
-  margin-top: auto;
+  margin-top: 1.25rem; /* Sit directly below the table as per user layout strategy */
 }
 
 .section-title {
@@ -375,8 +374,8 @@ html, body {
   overflow-y: auto;
 }
 
-/* Isolated Tablet Fixes (Portrait & Landscape iPads) */
-@media screen and (max-width: 1024px) {
+/* Isolated Tablet Fixes (Portrait & Landscape iPads) - Expanded to 1400px for iPad Pro 11"/12.9" */
+@media screen and (max-width: 1400px) {
   .app-container {
     /* Use env() to detect iPad Home Indicator, safe for other browsers */
     padding-bottom: env(safe-area-inset-bottom, 15px);
@@ -393,6 +392,8 @@ html, body {
     height: 100dvh !important;
     box-sizing: border-box !important;
     padding-bottom: env(safe-area-inset-bottom, 15px) !important;
+    padding-top: 10px !important; /* Top space handled by padding */
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
   
