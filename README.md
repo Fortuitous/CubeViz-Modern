@@ -1,16 +1,44 @@
-# React + Vite
+# CubeViz Modern
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Backgammon match data, aggregated and visualized.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+CubeViz Modern is a React-based visualization tool that explores the effect of match-scores on cube decisions. It presents cube-action data for all scores up to a 25-point match simultaneously, allowing users to see patterns as a whole rather than peeking at individual data points.
 
-## React Compiler
+## Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project is built with **React** and **Vite**, designed to be responsive across desktop, tablet, and mobile devices.
 
-## Expanding the ESLint configuration
+### Key Components
+- **Desktop/Tablet Layout**: A side-by-side pane layout featuring a Backgammon Board, Position Details, and a comprehensive Heatmap.
+- **Mobile View**: A tab-based navigation system (Position, Scores, Settings) optimized for portrait use on phones.
+- **Legacy Integration**: Integrates with legacy JavaScript engines and data structures for backward compatibility with established backgammon data formats.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
+
+### Installation
+```bash
+npm install
+```
+
+### Local Development
+To start the development server with network access enabled:
+```bash
+npm run dev -- --host
+```
+
+### Building for Production
+```bash
+npm run build
+```
+
+### Deployment
+The project is configured for GitHub Pages. Pushing to the `master` branch triggers an automated deployment via GitHub Actions.
+
+## Version
+Current Version: **1.0.0 (Stable Release)**
